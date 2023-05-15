@@ -8,6 +8,8 @@ import { Contact10 } from 'components/blocks/contact';
 import { FAQ1 } from 'components/blocks/faq';
 import { Footer9 } from 'components/blocks/footer';
 import { Navbar } from 'components/blocks/navbar';
+import { Pricing3 } from 'components/blocks/pricing';
+
 import { Services22 } from 'components/blocks/services';
 
 //import { Blog2 } from 'components/blocks/blog';
@@ -48,6 +50,10 @@ const Home = ({ posts }) => {
           {/* <Blog2 posts={posts} /> */}
           <div className="container py-14 py-md-16">
             <Services22 />
+          </div>
+          <div className="container py-14 py-md-16">
+            {/* <Pricing1 /> */}
+            <Pricing3 />
           </div>
           <div className="container py-14 py-md-16">
             <FAQ1 />

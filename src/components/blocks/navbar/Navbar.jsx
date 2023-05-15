@@ -6,7 +6,6 @@ import useSticky from 'hooks/useSticky'; // -------- custom component -------- /
 import NextLink from 'components/reuseable/links/NextLink';
 import SocialLinks from 'components/reuseable/SocialLinks';
 import ListItemLink from 'components/reuseable/links/ListItemLink';
-import DropdownToggleLink from 'components/reuseable/links/DropdownToggleLink'; // -------- partial header component -------- //
 
 import Social from './partials/Social';
 // ===================================================================
@@ -44,95 +43,37 @@ const Navbar = (props) => {
           <ul className="navbar-nav">
             {/* ===================== demos nav item ===================== */}
             <li className="nav-item ">
-              <DropdownToggleLink title="Services" className="nav-link " />
-
-              {/* <ul className="dropdown-menu mega-menu mega-menu-dark mega-menu-img">
-                <li className="mega-menu-content mega-menu-scroll">
-                  <ul className="row row-cols-1 row-cols-lg-6 gx-0 gx-lg-4 gy-lg-2 list-unstyled">
-                    {demos.map(({
-                    id,
-                    title,
-                    url,
-                    thumnail
-                  }) => <li className="col" key={id}>
-                        <Link href={url} passHref legacyBehavior>
-                          <a className="dropdown-item">
-                            <img alt={title} src={`/img/demos/${thumnail}.jpg`} srcSet={`/img/demos/${thumnail}@2x.jpg 2x`} className="rounded lift d-none d-lg-block" />
-                            <span className="d-lg-none">{title}</span>
-                          </a>
-                        </Link>
-                      </li>)}
-                  </ul>
-
-                  <span className="d-none d-lg-flex">
-                    <i className="uil uil-direction" />
-                    <strong>Scroll to view more</strong>
-                  </span>
-                </li>
-              </ul> */}
+              <a className="nav-link" href="">
+                Services
+              </a>
             </li>
 
             {/*  ===================== pages nav item  ===================== */}
             <li className="nav-item ">
-              <DropdownToggleLink title="About" className="nav-link" />
-
-              {/* <ul className="dropdown-menu">
-                {pages.map(({ id, title, children }) => {
-                  return (
-                    <li className="dropdown dropdown-submenu dropend" key={id}>
-                      <DropdownToggleLink title={title} />
-                      <ul className="dropdown-menu">{renderLinks(children)}</ul>
-                    </li>
-                  );
-                })}
-
-                <ListItemLink href="/pricing" title="Pricing" linkClassName="dropdown-item" />
-              </ul> */}
+              <a className="nav-link" href="">
+                About
+              </a>
             </li>
 
             {/* ===================== projects nav item  ===================== */}
             <li className="nav-item ">
-              <DropdownToggleLink title="FAQs" className="nav-link " />
-
-              {/* <div className="dropdown-menu dropdown-lg">
-                <div className="dropdown-lg-content">
-                  {projectsNavigation.map(({ title, children }, i) => (
-                    <div key={title + i}>
-                      <h6 className="dropdown-header">{title}</h6>
-                      <ul className="list-unstyled">{renderLinks(children)}</ul>
-                    </div>
-                  ))}
-                </div>
-              </div> */}
+              <a className="nav-link" href="">
+                FAQs
+              </a>
             </li>
 
             {/* ===================== blog nav item ===================== */}
             <li className="nav-item dropdown">
-              <DropdownToggleLink title="Blog" className="nav-link dropdown-toggle" />
+              <a className="nav-link" href="">
+                Blog
+              </a>
             </li>
 
             {/* ===================== blocks nav item ===================== */}
             <li className="nav-item ">
-              <DropdownToggleLink title="Intake Form" className="nav-link " />
-              {/* <ul className="dropdown-menu mega-menu mega-menu-dark mega-menu-img">
-                <li className="mega-menu-content">
-                  <ul className="row row-cols-1 row-cols-lg-6 gx-0 gx-lg-6 gy-lg-4 list-unstyled">
-                    {blocksNavigation.map(({ id, thumnail, title, url }) => (
-                      <li className="col" key={id}>
-                        <Link href={url} passHref legacyBehavior>
-                          <a className="dropdown-item">
-                            <div className="rounded img-svg d-none d-lg-block p-4 mb-lg-2">
-                              <img className="rounded-0" src={thumnail} alt="" />
-                            </div>
-
-                            <span>{title}</span>
-                          </a>
-                        </Link>
-                      </li>
-                    ))}
-                  </ul>
-                </li>
-              </ul> */}
+              <a className="nav-link" href="">
+                Pricing
+              </a>
             </li>
           </ul>
 
@@ -154,20 +95,6 @@ const Navbar = (props) => {
         <ul className="navbar-nav flex-row align-items-center ms-auto">
           {/* ============= contact button ============= */}
           {button && <li className="nav-item d-none d-md-block">{button}</li>}
-
-          {/* ============= shopping cart button ============= */}
-          {cart && (
-            <li className="nav-item">
-              <a
-                data-bs-toggle="offcanvas"
-                data-bs-target="#offcanvas-cart"
-                className="nav-link position-relative d-flex flex-row align-items-center"
-              >
-                <i className="uil uil-shopping-cart" />
-                <span className="badge badge-cart bg-primary">3</span>
-              </a>
-            </li>
-          )}
 
           {/* ============= social icons link ============= */}
           {social && <Social />}

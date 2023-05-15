@@ -16,7 +16,7 @@ const Hero4 = () => {
           <div className="col-lg-6">
             <div className="mt-10 mt-md-11 mt-lg-n10 px-10 px-md-11 ps-lg-0 pe-lg-13 text-center text-lg-start">
               <h1 className="display-1 mb-5" style={slideInDownAnimate('600ms')}>
-                Making Mental Health Care easily accessible while providing quality holistic care.
+                Making Mental Health Care Easily Accessible While Providing Quality Holistic Care.
               </h1>
               <p className="lead fs-25 lh-sm mb-7 pe-md-10" style={slideInDownAnimate('900ms')}>
                 Providing care to 18+ from the comfort of your own home.
