@@ -1,9 +1,15 @@
 import NextLink from 'components/reuseable/links/NextLink';
 import { Fragment } from 'react'; // -------- custom component -------- //
-import { Hero4 } from 'components/blocks/hero';
-import { Navbar } from 'components/blocks/navbar';
-import { Contact10 } from 'components/blocks/contact';
 import PageProgress from 'components/common/PageProgress';
+
+import { Hero4 } from 'components/blocks/hero';
+
+import { Contact10 } from 'components/blocks/contact';
+import { FAQ1 } from 'components/blocks/faq';
+import { Footer9 } from 'components/blocks/footer';
+import { Navbar } from 'components/blocks/navbar';
+import { Services22 } from 'components/blocks/services';
+
 //import { Blog2 } from 'components/blocks/blog';
 
 //? getStaticProps can only be exported from a page. You can’t export it from non-page files.
@@ -37,14 +43,23 @@ const Home = ({ posts }) => {
         <Hero4 />
 
         <section className="wrapper bg-light position-relative">
+          {/* <div className="container py-14 py-md-16"> */}
+          {/* ========== blog section ========== */}
+          {/* <Blog2 posts={posts} /> */}
           <div className="container py-14 py-md-16">
-            {/* ========== blog section ========== */}
-            {/* <Blog2 posts={posts} /> */}
-
+            <Services22 />
+          </div>
+          <div className="container py-14 py-md-16">
+            <FAQ1 />
+          </div>
+          <div className="container py-14 py-md-16">
             <Contact10 />
           </div>
+
+          {/* </div> */}
         </section>
       </main>
+      <Footer9 />
     </Fragment>
   );
 };
