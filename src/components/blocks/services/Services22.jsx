@@ -1,26 +1,99 @@
 import { Fragment } from 'react'; // -------- icons -------- //
 
-import Bulb from 'icons/solid-mono/Bulb';
+import Puzzle from 'icons/solid-mono/Puzzle';
 import Compare from 'icons/solid-mono/Compare';
-import DeliveryBox from 'icons/solid-mono/DeliveryBox'; // -------- custom component -------- //
+import VideoCall from 'icons/solid-mono/VideoCall';
 
 import NextLink from 'components/reuseable/links/NextLink';
+const listOG = [
+  'ADHD (non stimulant)',
+  'Anxiety',
+  'Binge',
+  'Eating Disorder',
+  'Bipolar Disorder',
+  'Depression',
+  'Difficult Life Transitions and Adjustments',
+  'Insomnia',
+  'Panic disorder',
+  'Postpartum Anxiety',
+  'Postpartum Depression',
+  'Postpartum Rage',
+  'PTSD',
+  'Substance Overuse/Abuse (we cannot treat active withdraw)',
+  'Weight Gain/Obesity'
+];
+const list1 = ['ADHD (non stimulant)', 'Anxiety', 'Binge', 'Eating Disorder', 'Bipolar Disorder'];
+const list2 = [
+  'Depression',
+  'Difficult Life Transitions and Adjustments',
+  'Insomnia',
+  'Panic disorder',
+  'Postpartum Anxiety'
+];
+const list3 = [
+  'Postpartum Depression',
+  'Postpartum Rage',
+  'PTSD',
+  'Substance Overuse/Abuse (we cannot treat active withdraw)',
+  'Weight Gain/Obesity'
+];
 
 const Services22 = () => {
   return (
     <Fragment>
       <div className="row">
         <div className="col-md-10 offset-md-1 col-lg-8 offset-lg-2 mx-auto text-center">
-          <h2 className="fs-16 text-uppercase text-muted mb-3">Services</h2>
+          {/* <h2 className="fs-16 text-uppercase text-muted mb-3">Services</h2> */}
           <h3 className="display-3 mb-10 px-xl-10 px-xxl-15">
-            Our services are <span className="underline-3 style-2 yellow">inclusive</span> and in a safe environment
+            Our Services are <span className="underline-3 style-2 yellow">Inclusive</span> and in a Safe Environment
           </h3>
         </div>
       </div>
-
+      <div className="row ">
+        <h2>What we Treat</h2>
+        {/* <ul className=" d-flex justify-content-between flex-lg-row flex-column mt-6">
+          {listOG.map((item) => (
+            <li key={item}>
+              <i className="uil uil-check" />
+              {item}
+            </li>
+          ))}
+        </ul> */}
+        <div className="col-lg-4">
+          <ul className="icon-list bullet-bg bullet-soft-primary">
+            {list1.map((item) => (
+              <li key={item}>
+                <i className="uil uil-check" />
+                {item}
+              </li>
+            ))}
+          </ul>
+        </div>
+        <div className="col-lg-4">
+          <ul className="icon-list bullet-bg bullet-soft-primary">
+            {list2.map((item) => (
+              <li key={item}>
+                <i className="uil uil-check" />
+                {item}
+              </li>
+            ))}
+          </ul>
+        </div>
+        <div className="col-lg-4">
+          <ul className="icon-list bullet-bg bullet-soft-primary">
+            {list3.map((item) => (
+              <li key={item}>
+                <i className="uil uil-check" />
+                {item}
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
+      <h2>Services</h2>
       <ul
         role="tablist"
-        className="nav nav-tabs nav-tabs-bg nav-tabs-shadow-lg d-flex justify-content-between nav-justified flex-lg-row flex-column"
+        className="nav nav-tabs nav-tabs-bg nav-tabs-shadow-lg d-flex justify-content-between nav-justified flex-lg-row flex-column mt-6"
       >
         <li className="nav-item" role="presentation">
           <a
@@ -31,7 +104,7 @@ const Services22 = () => {
             className="nav-link d-flex flex-row active"
           >
             <div>
-              <Bulb />
+              <Compare />
             </div>
             <div>
               <h4 className="mb-1">Medication Management</h4>
@@ -50,10 +123,10 @@ const Services22 = () => {
             className="nav-link d-flex flex-row"
           >
             <div>
-              <Compare />
+              <Puzzle />
             </div>
             <div>
-              <h4 className="mb-1">Life Coaching</h4>
+              <h4 className="mb-1">Lifestyle Coaching</h4>
               <p>Vivamus sagittis lacus augue fusce dapibus t.</p>
             </div>
           </a>
@@ -69,11 +142,11 @@ const Services22 = () => {
             className="nav-link d-flex flex-row"
           >
             <div>
-              <DeliveryBox className="icon-svg-sm solid-mono text-green me-4" />
+              <VideoCall className="icon-svg-sm solid-mono text-green me-4" />
             </div>
             <div>
-              <h4 className="mb-1">Problem/Solution Focused Therapy</h4>
-              <p>Vestibulum ligula porta felis maecenas faucibus mollis.</p>
+              <h4 className="mb-1">Supportive Therapy</h4>
+              <p>Problem/Solution Focused</p>
             </div>
           </a>
         </li>
@@ -85,11 +158,18 @@ const Services22 = () => {
           <div className="row gx-lg-8 gx-xl-12 gy-10 align-items-center">
             <div className="col-lg-6">
               <figure className="rounded shadow-lg">
-                <img src="/img/photos/se5.jpg" srcSet="/img/photos/se5@2x.jpg 2x" alt="" />
+                <img src="/img/photos/medication610x410.webp" srcSet="/img/photos/medication1220x880.webp" alt="" />
               </figure>
             </div>
 
-            <List title="Collect Ideas" color="fuchsia" />
+            <List
+              title="Medication Management"
+              color="fuchsia"
+              text="  After evaluation, together we will consider if medication is the next step you need to take. We will discuss
+        options that would treat your target symptoms so you can make an informed decision on what feels best for you.
+        If you are already taking medications, we can discuss continuing your medications. Please note, prescriptions
+        are granted at provider's discretion."
+            />
           </div>
         </div>
 
@@ -97,11 +177,16 @@ const Services22 = () => {
           <div className="row gx-lg-8 gx-xl-12 gy-10 align-items-center">
             <div className="col-lg-6 order-lg-2">
               <figure className="rounded shadow-lg">
-                <img src="/img/photos/se6.jpg" srcSet="/img/photos/se6@2x.jpg 2x" alt="" />
+                <img src="/img/photos/coaching610x410.webp" srcSet="/img/photos/coaching1220x880.webp" alt="" />
               </figure>
             </div>
 
-            <List title="Data Analysis" color="violet" />
+            <List
+              title="Lifestyle Coaching"
+              color="violet"
+              text="It's true that a healthy lifestyle impacts both mental and physical health, therefore it's imperative we discuss what you are doing or could do better to naturally help your mental health.  
+Things of focus are typically nutrition, exercise, sleep, substance use, etc. "
+            />
           </div>
         </div>
 
@@ -109,41 +194,38 @@ const Services22 = () => {
           <div className="row gx-lg-8 gx-xl-12 gy-10 align-items-center">
             <div className="col-lg-6">
               <figure className="rounded shadow-lg">
-                <img src="/img/photos/se7.jpg" srcSet="/img/photos/se7@2x.jpg 2x" alt="" />
+                <img src="/img/photos/support610x410.webp" srcSet="/img/photos/support1220x880.webp" alt="" />
               </figure>
             </div>
 
-            <List title="Finalize Product" color="green" />
+            <List
+              title="Supportive Therapy"
+              color="green"
+              text="We provide brief therapy and will discuss coping mechanisms during your visit."
+            />
           </div>
+        </div>
+      </div>
+      <hr className="my-8" />
+      <div className="row">
+        <div className="col-md-10 col-lg-8 mt-6">
+          <p>
+            We are unable to prescribe any controlled substances. Evaluations are for treatment purposes only. <br /> We
+            are an outpatient treatment facility, we DO NOT offer crisis support. <br />
+            In case of an emergency please call 911 or go to nearest Emergency Department. Suicide hotline and/or chat
+            988 <NextLink href="https://988lifeline.org" target="_blank" title="https://988lifeline.org" />
+          </p>
         </div>
       </div>
     </Fragment>
   );
 };
 
-const List = ({ color, title }) => {
+const List = ({ color, title, text }) => {
   return (
     <div className="col-lg-6">
       <h2 className="mb-3">{title}</h2>
-      <p>
-        Etiam porta sem malesuada magna mollis euismod. Donec ullamcorper nulla non metus auctor fringilla. Morbi leo
-        risus, porta ac consectetur ac, vestibulum at eros. Fusce dapibus, tellus ac cursus commodo, tortor mauris
-        condimentum nibh, ut fermentum massa justo sit amet risus. Nullam quis risus eget urna.
-      </p>
-
-      <ul className={`icon-list bullet-bg bullet-soft-${color}`}>
-        <li>
-          <i className="uil uil-check" /> Aenean eu leo quam. Pellentesque ornare.
-        </li>
-        <li>
-          <i className="uil uil-check" /> Nullam quis risus eget urna mollis ornare.
-        </li>
-        <li>
-          <i className="uil uil-check" /> Donec id elit non mi porta gravida at eget.
-        </li>
-      </ul>
-
-      <NextLink title="Learn More" href="#" className={`btn btn-${color} mt-2`} />
+      <p>{text}</p>
     </div>
   );
 };

@@ -6,7 +6,7 @@ const Hero4 = () => {
     <section className="wrapper bg-light position-relative min-vh-70 d-lg-flex align-items-center">
       <div
         style={{
-          backgroundImage: 'url(/img/photos/about16.jpg)'
+          backgroundImage: 'url(/img/photos/hero.jpg)'
         }}
         className="rounded-4-lg-start col-lg-6 order-lg-2 position-lg-absolute top-0 end-0 image-wrapper bg-image bg-cover h-100 min-vh-50"
       />

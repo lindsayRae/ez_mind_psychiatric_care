@@ -56,6 +56,13 @@ const Navbar = (props) => {
             </li>
 
             {/* ===================== projects nav item  ===================== */}
+
+            {/* ===================== blocks nav item ===================== */}
+            <li className="nav-item ">
+              <a className="nav-link" href="">
+                Pricing
+              </a>
+            </li>
             <li className="nav-item ">
               <a className="nav-link" href="">
                 FAQs
@@ -66,13 +73,6 @@ const Navbar = (props) => {
             <li className="nav-item dropdown">
               <a className="nav-link" href="">
                 Blog
-              </a>
-            </li>
-
-            {/* ===================== blocks nav item ===================== */}
-            <li className="nav-item ">
-              <a className="nav-link" href="">
-                Pricing
               </a>
             </li>
           </ul>

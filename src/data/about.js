@@ -23,16 +23,18 @@ export const aboutList3 = [
   {
     id: 1,
     title: 'Our Vision',
-    description: `Nulla vitae elit libero, a pharetra augue. Donec id elit non mi porta gravida at eget. Fusce dapibus tellus.`
+    description: `Create EZ access to quality mental health care that feels safe for all.`
   },
   {
     id: 2,
     title: 'Our Mission',
-    description: `Maecenas faucibus mollis interdum. Vivamus sagittis lacus vel augue laoreet. Sed posuere consectetur.`
+    description: `Support healing and offer guidance for mental health to allow people to live a calm meaningful life.`
   },
   {
     id: 3,
     title: 'Our Values',
-    description: `Cras justo odio, dapibus ac facilisis in, egestas eget quam. Praesent commodo cursus magna scelerisque.`
+    description: `Authenticity
+    Empathy
+    Inclusivity`
   }
 ]; // used in the about-20, about-21 block

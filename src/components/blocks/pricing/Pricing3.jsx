@@ -4,7 +4,7 @@ import NextLink from 'components/reuseable/links/NextLink';
 import { PricingCard1 } from 'components/reuseable/pricing-cards'; // -------- data -------- //
 
 import { pricingList1 } from 'data/pricing';
-import Accordion from 'components/reuseable/accordion';
+
 import AccordionList from 'components/common/AccordionList';
 
 const Pricing3 = () => {
