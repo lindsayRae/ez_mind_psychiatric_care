@@ -3,7 +3,7 @@ import Accordion from 'components/reuseable/accordion'; // -------- data -------
 const accordions = [
   {
     no: 'One',
-    expand: true,
+    expand: false,
     heading: 'Monthly Subscriptions',
     body: 'If you are interested in monthly subscription for your care, please inquire for more information.'
   },

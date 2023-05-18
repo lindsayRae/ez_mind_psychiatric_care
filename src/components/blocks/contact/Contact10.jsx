@@ -34,10 +34,10 @@ const Contact10 = () => {
             <div className="row gx-md-8 gx-xl-12 gy-10">
               <div className="col-lg-6">
                 <Email />
-                <h2 className="display-4 mb-3 pe-lg-10">If you like what you see, let's work together.</h2>
+                <h2 className="display-4 mb-3 pe-lg-10">Contact Us Today</h2>
                 <p className="lead pe-lg-12 mb-0">
-                  I bring rapid solutions to make the life of my clients easier. Have any questions? Reach out to me
-                  from this contact form and I will get back to you shortly.
+                  Nulla a tortor vulputate, lobortis velit a, laoreet diam. Integer fringilla odio felis, eu mattis nisi
+                  aliquam ac.
                 </p>
               </div>
 

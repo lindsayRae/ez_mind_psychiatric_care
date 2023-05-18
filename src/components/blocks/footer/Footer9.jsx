@@ -14,7 +14,7 @@ const Footer9 = () => {
               <img className="mb-4" src="/img/logo-light.png" srcSet="/img/logo-light@2x.png 2x" alt="" />
 
               <p className="mb-4">
-                © 2022 Sandbox. <br className="d-none d-lg-block" />
+                © 2023 EZ Mind Psychiatric Care <br className="d-none d-lg-block" />
                 All rights reserved.
               </p>
 
@@ -58,7 +58,7 @@ const Footer9 = () => {
           <div className="col-md-4 col-lg-2">
             <div className="widget">
               <h4 className="widget-title mb-3 text-white">Get in Touch</h4>
-              <address>Moonshine St. 14/05 Light City, London, United Kingdom</address>
+              <address>P.O. Box 1234 Washington</address>
               <NextLink title="info@email.com" href="mailto:#" />
               <br /> p. 206-319-5399
               <br /> f. 206-385-5946

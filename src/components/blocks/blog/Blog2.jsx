@@ -24,7 +24,7 @@ const Blog2 = ({ posts }) => {
       <div className="row text-center">
         <div className="col-lg-9 col-xl-8 col-xxl-7 mx-auto">
           <h2 className="fs-15 text-uppercase text-primary mb-3">Blogs</h2>
-          <h3 className="display-4 mb-6">Check out some of our awesome blogszzz.</h3>
+          <h3 className="display-4 mb-6">Check Out Our Latest Articles</h3>
         </div>
       </div>
 
