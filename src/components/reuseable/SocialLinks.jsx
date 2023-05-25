@@ -4,12 +4,12 @@ const links = [
   {
     id: 2,
     icon: 'uil uil-facebook-f',
-    url: 'https://facebook.com/uiLibOfficial/'
+    url: 'https://facebook.com'
   },
   {
     id: 4,
     icon: 'uil uil-instagram',
-    url: 'https://www.instagram.com/uilibofficial/'
+    url: 'https://www.instagram.com'
   }
 ];
 

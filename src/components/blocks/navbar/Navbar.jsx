@@ -12,8 +12,7 @@ import Social from './partials/Social';
 
 // ===================================================================
 const Navbar = (props) => {
-  const { navClassName, info, search, social, language, button, cart, fancy, navOtherClass, stickyBox, logoAlt } =
-    props;
+  const { navClassName, social, button, fancy, navOtherClass, stickyBox, logoAlt } = props;
   const sticky = useSticky(350);
   const navbarRef = useRef(null); // dynamically render the logo
 
@@ -36,34 +35,34 @@ const Navbar = (props) => {
 
       <div id="offcanvas-nav" data-bs-scroll="true" className="navbar-collapse offcanvas offcanvas-nav offcanvas-start">
         <div className="offcanvas-header d-lg-none">
-          <h3 className="text-white fs-30 mb-0">Sandbox</h3>
+          <h3 className="text-white fs-30 mb-0">EZ Mind Psychiatric Care</h3>
           <button type="button" aria-label="Close" data-bs-dismiss="offcanvas" className="btn-close btn-close-white" />
         </div>
 
         <div className="offcanvas-body ms-lg-auto d-flex flex-column h-100">
           <ul className="navbar-nav">
-            {/* ===================== demos nav item ===================== */}
+            {/* ===================== services nav item ===================== */}
             <li className="nav-item ">
               <a className="nav-link" href="#services">
                 Services
               </a>
             </li>
 
-            {/*  ===================== pages nav item  ===================== */}
+            {/*  ===================== about nav item  ===================== */}
             <li className="nav-item ">
               <a className="nav-link" href="#about">
                 About
               </a>
             </li>
 
-            {/* ===================== projects nav item  ===================== */}
-
-            {/* ===================== blocks nav item ===================== */}
+            {/* ===================== pricing nav item ===================== */}
             <li className="nav-item ">
               <a className="nav-link" href="#pricing">
                 Pricing
               </a>
             </li>
+
+            {/* ===================== faqs nav item ===================== */}
             <li className="nav-item ">
               <a className="nav-link" href="#faqs">
                 FAQs
@@ -71,7 +70,7 @@ const Navbar = (props) => {
             </li>
 
             {/* ===================== blog nav item ===================== */}
-            <li className="nav-item dropdown">
+            <li className="nav-item">
               <a className="nav-link" href="#blog">
                 Blog
               </a>
@@ -83,7 +82,7 @@ const Navbar = (props) => {
             <div>
               <NextLink title="info@email.com" className="link-inverse" href="mailto:first.last@email.com" />
               <br />
-              <NextLink href="tel:0123456789" title="00 (123) 456 78 90" />
+              <NextLink href="tel:206-319-5399" title="p. 206-319-5399" />
               <br />
               <SocialLinks />
             </div>

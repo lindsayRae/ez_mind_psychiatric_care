@@ -36,7 +36,7 @@ const Home = ({ posts }) => {
       <header className="wrapper mb-1">
         <Navbar
           navClassName="navbar navbar-expand-lg center-nav transparent navbar-light caret-none"
-          button={<NextLink title="Contact" href="#" className="btn btn-sm btn-primary rounded" />}
+          button={<NextLink title="Contact" href="#contact" className="btn btn-sm btn-primary rounded" />}
         />
       </header>
 

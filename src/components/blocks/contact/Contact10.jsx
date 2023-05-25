@@ -27,7 +27,7 @@ const Contact10 = () => {
     alert(`Your email was sent!`);
   };
   return (
-    <section className="wrapper bg-light">
+    <section className="wrapper bg-light" id="contact">
       <div className="container py-14 py-md-16">
         <div className="card bg-soft-primary mb-8">
           <div className="card-body p-12">

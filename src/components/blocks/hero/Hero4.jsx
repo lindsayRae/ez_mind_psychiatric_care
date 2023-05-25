@@ -27,7 +27,7 @@ const Hero4 = () => {
                 style={slideInDownAnimate('900ms')}
               >
                 <span style={slideInDownAnimate('1200ms')}>
-                  <NextLink href="#" title="Contact Us" className="btn btn-lg btn-primary rounded-pill me-2" />
+                  <NextLink href="#contact" title="Contact Us" className="btn btn-lg btn-primary rounded-pill me-2" />
                 </span>
               </div>
             </div>
