@@ -7,7 +7,7 @@ import { aboutList3 } from 'data/about';
 const About11 = () => {
   return (
     <Fragment>
-      <div className="row gx-lg-8 gx-xl-12 gy-10 mb-10 mb-md-12 align-items-center">
+      <div className="row gx-lg-8 gx-xl-12 gy-10 mb-10 mb-md-12 align-items-center" id="about">
         <div className="col-lg-6 order-lg-2">
           <Tiles10 />
         </div>

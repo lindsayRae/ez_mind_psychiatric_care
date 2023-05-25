@@ -30,7 +30,8 @@ const Navbar = (props) => {
   const headerContent = (
     <Fragment>
       <div className="navbar-brand w-100">
-        <Link href={`/`}>EZ Mind Psychiatric Care</Link>
+        {/* <Link href={`/`}>EZ Mind Psychiatric Care</Link> */}
+        EZ Mind Psychiatric Care
       </div>
 
       <div id="offcanvas-nav" data-bs-scroll="true" className="navbar-collapse offcanvas offcanvas-nav offcanvas-start">
@@ -43,14 +44,14 @@ const Navbar = (props) => {
           <ul className="navbar-nav">
             {/* ===================== demos nav item ===================== */}
             <li className="nav-item ">
-              <a className="nav-link" href="">
+              <a className="nav-link" href="#services">
                 Services
               </a>
             </li>
 
             {/*  ===================== pages nav item  ===================== */}
             <li className="nav-item ">
-              <a className="nav-link" href="">
+              <a className="nav-link" href="#about">
                 About
               </a>
             </li>
@@ -59,19 +60,19 @@ const Navbar = (props) => {
 
             {/* ===================== blocks nav item ===================== */}
             <li className="nav-item ">
-              <a className="nav-link" href="">
+              <a className="nav-link" href="#pricing">
                 Pricing
               </a>
             </li>
             <li className="nav-item ">
-              <a className="nav-link" href="">
+              <a className="nav-link" href="#faqs">
                 FAQs
               </a>
             </li>
 
             {/* ===================== blog nav item ===================== */}
             <li className="nav-item dropdown">
-              <a className="nav-link" href="">
+              <a className="nav-link" href="#blog">
                 Blog
               </a>
             </li>

@@ -41,7 +41,7 @@ const list3 = [
 const Services22 = () => {
   return (
     <Fragment>
-      <div className="row">
+      <div className="row" id="services">
         <div className="col-md-10 offset-md-1 col-lg-8 offset-lg-2 mx-auto text-center">
           {/* <h2 className="fs-16 text-uppercase text-muted mb-3">Services</h2> */}
           <h3 className="display-3 mb-10 px-xl-10 px-xxl-15">
@@ -127,7 +127,7 @@ const Services22 = () => {
             </div>
             <div>
               <h4 className="mb-1">Lifestyle Coaching</h4>
-              <p>Vivamus sagittis lacus augue fusce dapibus t.</p>
+              <p>Sleep, Nutrition and Exercise</p>
             </div>
           </a>
         </li>
@@ -210,8 +210,8 @@ Things of focus are typically nutrition, exercise, sleep, substance use, etc. "
       <div className="row">
         <div className="col-md-10 col-lg-8 mt-6">
           <p>
-            We are unable to prescribe any controlled substances. Evaluations are for treatment purposes only. <br /> We
-            are an outpatient treatment facility, we DO NOT offer crisis support. <br />
+            Evaluations are for treatment purposes only. <br /> We are an outpatient treatment facility, we DO NOT offer
+            crisis support. <br />
             In case of an emergency please call 911 or go to nearest Emergency Department. Suicide hotline and/or chat
             988 <NextLink href="https://988lifeline.org" target="_blank" title="https://988lifeline.org" />
           </p>

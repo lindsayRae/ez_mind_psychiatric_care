@@ -9,7 +9,7 @@ import AccordionList from 'components/common/AccordionList';
 
 const Pricing3 = () => {
   return (
-    <div className="row gy-6 mb-16 mb-md-18">
+    <div className="row gy-6 mb-16 mb-md-18" id="pricing">
       <div className="col-lg-4">
         {/* <h2 className="fs-16 text-uppercase text-line text-primary mt-lg-18 mb-3">Our Pricing</h2> */}
         <h3 className="display-4 mb-3">Pricing</h3>

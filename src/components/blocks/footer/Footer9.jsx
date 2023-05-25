@@ -31,9 +31,11 @@ const Footer9 = () => {
                     <NextLink title={title} href={url} />
                   </li>
                 ))} */}
-                <li>Support</li>
-                <li>Getting Started</li>
-                <li>Terms of use</li>
+                <li>Link 1</li>
+                <li>Link 2</li>
+                <li>Link 3</li>
+                <li>Link 4</li>
+                <li>Link 5</li>
               </ul>
             </div>
           </div>
@@ -51,6 +53,8 @@ const Footer9 = () => {
                 <li>Services</li>
                 <li>About</li>
                 <li>Pricing</li>
+                <li>FAQs</li>
+                <li>Blog</li>
               </ul>
             </div>
           </div>
@@ -58,7 +62,7 @@ const Footer9 = () => {
           <div className="col-md-4 col-lg-2">
             <div className="widget">
               <h4 className="widget-title mb-3 text-white">Get in Touch</h4>
-              <address>P.O. Box 1234 Washington</address>
+              <address>18 W. Mercer St Suite 360 Seattle, WA 48119</address>
               <NextLink title="info@email.com" href="mailto:#" />
               <br /> p. 206-319-5399
               <br /> f. 206-385-5946
