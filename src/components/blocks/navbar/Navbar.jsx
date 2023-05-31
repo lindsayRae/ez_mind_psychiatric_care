@@ -30,7 +30,10 @@ const Navbar = (props) => {
     <Fragment>
       <div className="navbar-brand w-100">
         {/* <Link href={`/`}>EZ Mind Psychiatric Care</Link> */}
-        EZ Mind Psychiatric Care
+        <NextLink
+          href="/"
+          title={<img alt="logo" src={`/img/logo_blue250x70.png`} srcSet={`/img/${logo}@2x.png 2x`} />}
+        />
       </div>
 
       <div id="offcanvas-nav" data-bs-scroll="true" className="navbar-collapse offcanvas offcanvas-nav offcanvas-start">

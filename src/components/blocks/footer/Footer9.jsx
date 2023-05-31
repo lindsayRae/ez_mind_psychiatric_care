@@ -11,7 +11,7 @@ const Footer9 = () => {
         <div className="row gy-6 gy-lg-0">
           <div className="col-lg-4">
             <div className="widget">
-              <img className="mb-4" src="/img/logo-light.png" srcSet="/img/logo-light@2x.png 2x" alt="" />
+              <img className="mb-4" src="/img/logo_cream250x70.png" srcSet="/img/logo-light@2x.png 2x" alt="" />
 
               <p className="mb-4">
                 © 2023 EZ Mind Psychiatric Care <br className="d-none d-lg-block" />

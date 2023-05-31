@@ -4,7 +4,7 @@ const links = [
   {
     id: 2,
     icon: 'uil uil-facebook-f',
-    url: 'https://facebook.com'
+    url: 'https://www.facebook.com/profile.php?id=100092170488917&mibextid=LQQJ4d'
   },
   {
     id: 4,

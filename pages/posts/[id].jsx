@@ -6,7 +6,7 @@ import PageProgress from 'components/common/PageProgress';
 import NextLink from 'components/reuseable/links/NextLink';
 
 const Post = ({ data }) => {
-  // console.log('POST DATA', data);
+  console.log('POST DATA', data);
   return (
     <Fragment>
       <PageProgress />
@@ -50,7 +50,7 @@ const Post = ({ data }) => {
         </section>
 
         {/* ========== job description section ========== */}
-        <section className="wrapper bg-light">
+        {/* <section className="wrapper bg-light">
           <div className="container pb-14 pb-md-16">
             <div className="row">
               <div className="col-lg-10 mx-auto">
@@ -65,7 +65,7 @@ const Post = ({ data }) => {
               </div>
             </div>
           </div>
-        </section>
+        </section> */}
       </main>
     </Fragment>
   );
@@ -74,7 +74,9 @@ const Post = ({ data }) => {
 export default Post;
 
 export const getStaticProps = async (context) => {
+  console.log('context.params:', context.params);
   const id = context.params.id;
+
   const res = await fetch(`http://127.0.0.1:8082/api/posts?filters\[Slug\][$eq]=${id}`);
   const { data } = await res.json();
   return {
@@ -85,7 +87,7 @@ export const getStaticProps = async (context) => {
 export const getStaticPaths = async () => {
   const res = await fetch('http://127.0.0.1:8082/api/posts');
   const { data } = await res.json();
-
+  console.log('DATA', data);
   const paths = data.map((post) => {
     return {
       params: { id: post.slug }

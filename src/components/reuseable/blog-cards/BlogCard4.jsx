@@ -6,7 +6,7 @@ import blogIMG from '../../../../public/img/photos/cf1.jpg';
 
 // ======================================================
 const BlogCard4 = (props) => {
-  console.log(props);
+  //console.log(props);
   //const { date, image, title, category, description, className = 'card' } = props;
   return (
     <article>
