@@ -1,3 +1,4 @@
+import Link from 'next/link';
 // -------- custom component -------- //
 import NextLink from 'components/reuseable/links/NextLink';
 import SocialLinks from 'components/reuseable/SocialLinks'; // -------- data -------- //
@@ -11,7 +12,7 @@ const Footer9 = () => {
         <div className="row gy-6 gy-lg-0">
           <div className="col-lg-4">
             <div className="widget">
-              <img className="mb-4" src="/img/logo_cream250x70.png" srcSet="/img/logo-light@2x.png 2x" alt="" />
+              <img className="mb-4" src="/img/logo_green250x70.png" srcSet="/img/logo-light@2x.png 2x" alt="" />
 
               <p className="mb-4">
                 © 2023 EZ Mind Psychiatric Care <br className="d-none d-lg-block" />
@@ -31,11 +32,16 @@ const Footer9 = () => {
                     <NextLink title={title} href={url} />
                   </li>
                 ))} */}
-                <li>Link 1</li>
-                <li>Link 2</li>
-                <li>Link 3</li>
-                <li>Link 4</li>
-                <li>Link 5</li>
+                <li>
+                  <Link href=" https://988lifeline.org" target="_blank">
+                    988 Suicide & Crisis Lifeline
+                  </Link>
+                </li>
+                <li>
+                  <Link href=" https://www.nami.org" target="_blank">
+                    National Alliance on Mental Illness
+                  </Link>
+                </li>
               </ul>
             </div>
           </div>

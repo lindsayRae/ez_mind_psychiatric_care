@@ -9,7 +9,7 @@ const links = [
   {
     id: 4,
     icon: 'uil uil-instagram',
-    url: 'https://www.instagram.com'
+    url: 'https://instagram.com/ezmindpsychiatriccare?igshid=OGQ5ZDc2ODk2ZA=='
   }
 ];
 

@@ -36,9 +36,10 @@ const Contact10 = () => {
                 <Email />
                 <h2 className="display-4 mb-3 pe-lg-10">Contact Us Today</h2>
                 <p className="lead pe-lg-12 mb-0">
-                  Nulla a tortor vulputate, lobortis velit a, laoreet diam. Integer fringilla odio felis, eu mattis nisi
-                  aliquam ac.
+                  We look forward to meeting you right where you are. Contact us to set up an appointment or to learn
+                  more about us.
                 </p>
+                <small>* Please do not add Protective Health Information on this form</small>
               </div>
 
               <div className="col-lg-6">

@@ -2,7 +2,7 @@
 
 // Example of a variable override to change the primary color.
 // Remove the "//" to uncomment it and see it in action.
-// $primary: #36a6cf;
+$primary: #84a29f;
 
 // Example of a variable override to change the theme font.
 // Remove the "//" to uncomment it and see it in action.
@@ -16,5 +16,8 @@
 
 // To use a Google font use the example below.
 // Remove the "//" to uncomment it and see it in action.
-$path-to-fonts: 'https://fonts.googleapis.com/css2?family=Montserrat:ital@0;1&display=swap';
-$font-family-sans-serif: 'Montserrat', sans-serif;
+// $path-to-fonts: 'https://fonts.googleapis.com/css2?family=Montserrat:ital@0;1&display=swap';
+// $font-family-sans-serif: 'Montserrat', sans-serif;
+
+$path-to-fonts: 'https://fonts.googleapis.com/css2?family=Libre+Baskerville&family=Montserrat:wght@400;500;600;700&display=swap';
+$font-family-sans-serif: 'Libre Baskerville', serif;

@@ -1,7 +1,6 @@
 import Head from 'next/head';
 import { useRouter } from 'next/router';
 import { Fragment, useEffect } from 'react';
-import ThemeProvider from 'theme/ThemeProvider'; // animate css
 
 import 'animate.css'; // import swiper css
 
@@ -21,6 +20,7 @@ import 'assets/scss/style.scss';
 
 function MyApp({ Component, pageProps }) {
   const { pathname } = useRouter();
+
   useEffect(() => {
     if (typeof window !== 'undefined') {
       // load bootstrap functionality
@@ -81,11 +81,7 @@ function MyApp({ Component, pageProps }) {
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>EZ Mind Psychiatric Care</title>
       </Head>
-
-      <ThemeProvider>
-        <div className="page-loader" />
-        <Component {...pageProps} />
-      </ThemeProvider>
+      <Component {...pageProps} />
     </Fragment>
   );
 }

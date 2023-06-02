@@ -1,11 +1,13 @@
 // Font Import
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital,wght@1,300;1,400;1,500;1,600;1,700');
-@import "../../fonts/space/space.css";
+
+@import '../../fonts/space/space.css';
 
 // Bootstrap Configuration
-@import "../../../../node_modules/bootstrap/scss/mixins";
+@import '../../../../node_modules/bootstrap/scss/mixins';
 
 // Font Variables
+
 $font-family-base: 'Space Grotesk', sans-serif;
 $font-family-serif: 'IBM Plex Serif', serif;
 $font-size-base: 0.85rem;
@@ -36,7 +38,18 @@ blockquote,
 .nav-tabs.nav-tabs-bg .nav-link p {
   font-weight: $font-weight-base;
 }
-.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
 .display-1,
 .display-2,
 .display-3,
@@ -59,8 +72,7 @@ blockquote,
 }
 .nav-link,
 .dropdown-item,
-.btn
-.more {
+.btn .more {
   letter-spacing: normal;
 }
 .btn,
@@ -75,7 +87,7 @@ blockquote,
 }
 .share-dropdown .dropdown-menu .dropdown-item,
 .btn-sm,
-.btn-group-sm>.btn,
+.btn-group-sm > .btn,
 .post-meta {
   @include font-size($font-size-base - 0.1);
 }
@@ -88,11 +100,13 @@ blockquote,
   padding-top: $btn-padding-top;
   padding-bottom: $btn-padding-bottom;
 }
-.btn-group-sm>.btn, .btn-sm {
+.btn-group-sm > .btn,
+.btn-sm {
   padding-top: $btn-padding-top-sm;
   padding-bottom: $btn-padding-bottom-sm;
 }
-.btn-group-lg>.btn, .btn-lg {
+.btn-group-lg > .btn,
+.btn-lg {
   padding-top: $btn-padding-top-lg;
   padding-bottom: $btn-padding-bottom-lg;
 }
@@ -106,7 +120,7 @@ blockquote.icon:before {
   .counter {
     @include font-size(2.05rem);
     &.counter-lg {
-      @include font-size(2.25rem)
+      @include font-size(2.25rem);
     }
   }
 }
@@ -118,20 +132,20 @@ blockquote.icon:before {
   line-height: 1.55;
 }
 .display-1 {
-  line-height: 1.15
+  line-height: 1.15;
 }
 .display-2 {
-  line-height: 1.2
+  line-height: 1.2;
 }
 .display-3 {
-  line-height: 1.2
+  line-height: 1.2;
 }
 .display-4 {
-  line-height: 1.25
+  line-height: 1.25;
 }
 .display-5 {
-  line-height: 1.25
+  line-height: 1.25;
 }
 .display-6 {
-  line-height: 1.3
+  line-height: 1.3;
 }
