@@ -214,7 +214,7 @@ Things of focus are typically nutrition, exercise, sleep, substance use, etc. "
             crisis support. <br />
             In case of an emergency please call 911 , call suicide hotline (988) <br />
             or go to nearest Emergency Department.{' '}
-            <NextLink href="https://988lifeline.org" target="_blank" title="988lifeline.org" />
+            <NextLink href="www.988lifeline.org" target="_blank" title="988lifeline.org" />
           </p>
         </div>
       </div>

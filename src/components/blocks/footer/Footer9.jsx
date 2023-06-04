@@ -33,12 +33,12 @@ const Footer9 = () => {
                   </li>
                 ))} */}
                 <li>
-                  <Link href=" https://988lifeline.org" target="_blank">
+                  <Link href="www.988lifeline.org" target="_blank">
                     988 Suicide & Crisis Lifeline
                   </Link>
                 </li>
                 <li>
-                  <Link href=" https://www.nami.org" target="_blank">
+                  <Link href="www.nami.org" target="_blank">
                     National Alliance on Mental Illness
                   </Link>
                 </li>
@@ -56,11 +56,21 @@ const Footer9 = () => {
               }) => <li key={title}>
                     <NextLink title={title} href={url} />
                   </li>)} */}
-                <li>Services</li>
-                <li>About</li>
-                <li>Pricing</li>
-                <li>FAQs</li>
-                <li>Blog</li>
+                <li>
+                  <a href="#services">Services</a>
+                </li>
+                <li>
+                  <a href="#about">About</a>
+                </li>
+                <li>
+                  <a href="#pricing">Pricing</a>
+                </li>
+                <li>
+                  <a href="#faqs">FAQs</a>
+                </li>
+                <li>
+                  <a href="#blog">Blog</a>
+                </li>
               </ul>
             </div>
           </div>
@@ -68,7 +78,7 @@ const Footer9 = () => {
           <div className="col-md-4 col-lg-2">
             <div className="widget">
               <h4 className="widget-title mb-3 text-white">Get in Touch</h4>
-              <address>18 W. Mercer St Suite 360 Seattle, WA 48119</address>
+              <address>18 W. Mercer St Suite 360 Seattle, WA 98119</address>
               <NextLink title="info@email.com" href="mailto:#" />
               <br /> p. 206-319-5399
               <br /> f. 206-385-5946

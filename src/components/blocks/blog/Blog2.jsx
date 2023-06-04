@@ -6,8 +6,8 @@ import { BlogCard4 } from 'components/reuseable/blog-cards'; // -------- data --
 //! THIS IS THE BLOG SECTION
 
 const Blog2 = ({ posts }) => {
-  //console.log('POSTS: ', posts);
-  //console.log('blogList: ', blogList);
+  console.log('POSTS from Blog2: ', posts);
+
   const carouselBreakpoints = {
     0: {
       slidesPerView: 1

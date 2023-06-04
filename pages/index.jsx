@@ -20,7 +20,6 @@ export async function getStaticProps() {
   const res = await fetch('http://127.0.0.1:8082/api/posts');
   let posts = await res.json();
   posts = posts.data;
-
   return {
     props: {
       posts
