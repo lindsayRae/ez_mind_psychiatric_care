@@ -49,15 +49,15 @@ const Post = ({ data }) => {
           </div>
         </section>
 
-        {/* ========== job description section ========== */}
-        {/* <section className="wrapper bg-light">
+        {/* ========== Blog description section ========== */}
+        <section className="wrapper bg-light">
           <div className="container pb-14 pb-md-16">
             <div className="row">
               <div className="col-lg-10 mx-auto">
                 <div className="blog single mt-n17">
                   <div className="card shadow-lg">
                     <div className="card-body">
-                      <h2 className="h1 mb-3">Job Description</h2>
+                      <h2 className="h1 mb-3">Blog Description</h2>
                       <p>{data[0].content}</p>
                     </div>
                   </div>
@@ -65,7 +65,7 @@ const Post = ({ data }) => {
               </div>
             </div>
           </div>
-        </section> */}
+        </section>
       </main>
     </Fragment>
   );
@@ -74,7 +74,7 @@ const Post = ({ data }) => {
 export default Post;
 
 export const getStaticProps = async (context) => {
-  console.log('context.params:', context.params);
+  console.log('***************context.params:', context);
   const id = context.params.id;
 
   const res = await fetch(`http://127.0.0.1:8082/api/posts?filters\[Slug\][$eq]=${id}`);
@@ -87,7 +87,7 @@ export const getStaticProps = async (context) => {
 export const getStaticPaths = async () => {
   const res = await fetch('http://127.0.0.1:8082/api/posts');
   const { data } = await res.json();
-  console.log('DATA', data);
+  console.log('DATA in getStaticPaths:', data);
   const paths = data.map((post) => {
     return {
       params: { id: post.slug }

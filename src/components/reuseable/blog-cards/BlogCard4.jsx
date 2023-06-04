@@ -7,18 +7,19 @@ import blogIMG from '../../../../public/img/photos/cf1.jpg';
 // ======================================================
 const BlogCard4 = (props) => {
   console.log('props from BlogCard4:', props);
-  const { date, image, title, category, description, className = 'card' } = props;
+  console.log(`/posts/${props.slug}`);
+  //const { date, image, title, category, description, className = 'card' } = props;
   return (
     <article>
       <div className="card">
         <figure className="card-img-top overlay overlay-1 hover-scale">
-          <Link href={`/api/posts/${props.attributes.slug}`} passHref legacyBehavior>
+          <Link href={`/posts/${props.slug}`} passHref legacyBehavior>
             <a>
               <Image
                 width={560}
                 height={350}
                 src={blogIMG}
-                alt={props.attributes.title}
+                alt={props.title}
                 style={{
                   width: '100%',
                   height: 'auto'
@@ -35,7 +36,7 @@ const BlogCard4 = (props) => {
 
         <div className="card-body">
           <div className="post-header">
-            <h2 className="post-title h3 mt-1 mb-3">{props.attributes.title}</h2>
+            <h2 className="post-title h3 mt-1 mb-3">{props.title}</h2>
           </div>
 
           <div className="post-content">
@@ -47,7 +48,7 @@ const BlogCard4 = (props) => {
           <ul className="post-meta d-flex mb-0">
             <li className="post-date">
               <i className="uil uil-calendar-alt" />
-              <span>{dayjs(props.attributes.date).format('DD MMM YYYY')}</span>
+              <span>{dayjs(props.date).format('DD MMM YYYY')}</span>
             </li>
 
             <li className="post-comments">
@@ -57,7 +58,7 @@ const BlogCard4 = (props) => {
                 title={
                   <>
                     <i className="uil uil-file-alt fs-15" />
-                    {props.attributes.category}
+                    {props.category}
                   </>
                 }
               />
