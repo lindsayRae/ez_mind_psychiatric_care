@@ -36,7 +36,7 @@ const Navbar = (props) => {
             <img
               alt="logo"
               src={`/img/logo_green250x70.png`}
-              srcSet={`/img/${logo}@2x.png 2x`}
+              // srcSet={`/img/${logo}@2x.png 2x`}
               style={{ paddingTop: '20px', paddingBottom: '40px' }}
             />
           }

@@ -1,6 +1,5 @@
 import { Fragment } from 'react';
 import { Tiles10 } from 'components/elements/tiles';
-import ListColumn from 'components/reuseable/ListColumn'; // -------- data -------- //
 
 import { aboutList3 } from 'data/about';
 
