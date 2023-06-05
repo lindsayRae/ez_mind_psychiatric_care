@@ -6,7 +6,7 @@ import VideoCall from 'icons/solid-mono/VideoCall';
 
 import NextLink from 'components/reuseable/links/NextLink';
 const listOG = [
-  'ADHD (non stimulant)',
+  'ADHD',
   'Anxiety',
   'Binge',
   'Eating Disorder',
@@ -22,7 +22,7 @@ const listOG = [
   'Substance Overuse/Abuse (we cannot treat active withdraw)',
   'Weight Gain/Obesity'
 ];
-const list1 = ['ADHD (non stimulant)', 'Anxiety', 'Binge', 'Eating Disorder', 'Bipolar Disorder'];
+const list1 = ['ADHD', 'Anxiety', 'Binge', 'Eating Disorder', 'Bipolar Disorder'];
 const list2 = [
   'Depression',
   'Difficult Life Transitions and Adjustments',
