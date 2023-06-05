@@ -127,7 +127,7 @@ const Services22 = () => {
             </div>
             <div>
               <h4 className="mb-1">Lifestyle Coaching</h4>
-              <p>Sleep, Nutrition and Exercise</p>
+              <p>Sleep, Nutrition, and Exercise</p>
             </div>
           </a>
         </li>
