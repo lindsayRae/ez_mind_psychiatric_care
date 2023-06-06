@@ -4,9 +4,12 @@ import { Navbar } from 'components/blocks/navbar';
 
 import PageProgress from 'components/common/PageProgress';
 import NextLink from 'components/reuseable/links/NextLink';
+import MarkdownIt from 'markdown-it';
 
 const Post = ({ data }) => {
   console.log('POST DATA', data);
+  const md = new MarkdownIt();
+  const htmlContent = md.render(data[0].content);
   return (
     <Fragment>
       <PageProgress />
@@ -57,8 +60,9 @@ const Post = ({ data }) => {
                 <div className="blog single mt-n17">
                   <div className="card shadow-lg">
                     <div className="card-body">
-                      <h2 className="h1 mb-3">Blog Description</h2>
-                      <p>{data[0].content}</p>
+                      {/* <h2 className="h1 mb-3">Blog Description</h2> */}
+
+                      <div dangerouslySetInnerHTML={{ __html: htmlContent }}></div>
                     </div>
                   </div>
                 </div>
@@ -74,7 +78,6 @@ const Post = ({ data }) => {
 export default Post;
 
 export const getStaticProps = async (context) => {
-  console.log('***************context.params:', context);
   const id = context.params.id;
 
   const res = await fetch(`http://127.0.0.1:8082/api/posts?filters\[Slug\][$eq]=${id}`);
