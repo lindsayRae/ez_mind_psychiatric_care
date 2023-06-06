@@ -1,6 +1,6 @@
 import { Fragment } from 'react'; // -------- custom component -------- //
 
-import { Navbar } from 'components/blocks/navbar';
+import { NavbarBlog } from 'components/blocks/navbar';
 import Link from 'next/link';
 
 import PageProgress from 'components/common/PageProgress';
@@ -18,9 +18,9 @@ const Post = ({ data }) => {
 
       {/* ========== header section ========== */}
       <header className="wrapper bg-soft-primary">
-        <Navbar
+        <NavbarBlog
           language
-          button={<NextLink title="Contact" href="#" className="btn btn-sm btn-primary rounded-pill" />}
+          button={<NextLink title="Contact" href="/#contact" className="btn btn-sm btn-primary rounded-pill" />}
         />
       </header>
 
@@ -32,7 +32,8 @@ const Post = ({ data }) => {
               <div className="col-md-10 col-xl-8 mx-auto">
                 <div className="post-header">
                   <div className="post-category text-line">
-                    <NextLink href="#" className="hover" title="Teamwork" />
+                    Blog
+                    {/* <NextLink href="#" className="hover" title="Teamwork" /> */}
                   </div>
 
                   <h1 className="display-1 mb-4">{data[0].title}</h1>
@@ -59,12 +60,17 @@ const Post = ({ data }) => {
               <div className="col-lg-10 mx-auto">
                 <div className="blog single mt-n17">
                   <div className="card shadow-lg">
-                    <FigureImage width={960} height={600} src="/img/photos/b1.jpg" className="card-img-top" />
+                    <FigureImage
+                      width={960}
+                      height={600}
+                      src={`/img/photos/blogs/${data[0].imageFileName}`}
+                      className="card-img-top"
+                    />
                     <div className="card-body">
                       <div className="classic-view">
                         <article className="post">
                           <div className="post-content mb-5">
-                            <h2 className="h1 mb-3">Blog Description</h2>
+                            {/* <h2 className="h1 mb-3">Blog Description</h2> */}
                             <div dangerouslySetInnerHTML={{ __html: htmlContent }}></div>
                           </div>
                         </article>
@@ -86,7 +92,7 @@ const Post = ({ data }) => {
                           </div>
 
                           <div className="mt-3 mt-md-0 ms-auto">
-                            <Link href="/" passHref legacyBehavior>
+                            <Link href="/#blog" passHref legacyBehavior>
                               <a className="btn btn-sm btn-soft-ash rounded-pill btn-icon btn-icon-start mb-0">
                                 <i className="uil uil-file-alt" /> All Blogs
                               </a>

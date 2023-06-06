@@ -2,7 +2,7 @@ import dayjs from 'dayjs';
 import Link from 'next/link';
 import Image from 'next/image';
 import NextLink from '../links/NextLink'; // ======================================================
-import blogIMG from '../../../../public/img/photos/cf1.jpg';
+import blogIMG from '../../../../public/img/photos/blogs/blog_3_960x600.webp';
 
 // ======================================================
 const BlogCard4 = (props) => {
