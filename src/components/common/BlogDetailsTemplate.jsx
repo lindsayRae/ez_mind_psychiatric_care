@@ -117,27 +117,6 @@ const BlogDetailsTemplate = () => {
                 Duis non arcu vel lectus urna mollis ornare vel eu leo.
               </p>
 
-              <div className="row g-6 mt-3 mb-10">
-                {images.map(({ id, url, full }) => (
-                  <div key={id} className="col-md-6">
-                    <figure className="hover-scale rounded cursor-dark">
-                      <a href={full} data-glightbox data-gallery="post">
-                        <Image
-                          width={460}
-                          height={307}
-                          src={url}
-                          alt="demo"
-                          style={{
-                            width: '100%',
-                            height: 'auto'
-                          }}
-                        />
-                      </a>
-                    </figure>
-                  </div>
-                ))}
-              </div>
-
               <p>
                 Maecenas sed diam eget risus varius blandit sit amet non magna. Cum sociis natoque penatibus et magnis
                 dis parturient montes, nascetur ridiculus mus. Donec sed odio dui. Nulla vitae elit libero, a pharetra
@@ -146,14 +125,6 @@ const BlogDetailsTemplate = () => {
                 posuere consectetur est at lobortis. Cras mattis consectetur purus sit amet fermentum. Praesent commodo
                 cursus magna.
               </p>
-
-              <blockquote className="fs-lg my-8">
-                <p>
-                  Sed posuere consectetur est at lobortis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis
-                  mollis, est non commodo luctus, nisi erat porttitor ligula lacinia odio sem nec elit purus.
-                </p>
-                <footer className="blockquote-footer">Very important person</footer>
-              </blockquote>
 
               <h3 className="h2 mb-4">Sit Vulputate Bibendum Purus</h3>
 
@@ -173,85 +144,40 @@ const BlogDetailsTemplate = () => {
                 nascetur ridiculus mus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.
               </p>
             </div>
-
-            <div className="post-footer d-md-flex flex-md-row justify-content-md-between align-items-center mt-8">
-              <div>
-                <ul className="list-unstyled tag-list mb-0">
-                  {tags.map(({ id, title, url }) => (
-                    <li key={id}>
-                      <NextLink href={url} title={title} className="btn btn-soft-ash btn-sm rounded-pill mb-0" />
-                    </li>
-                  ))}
-                </ul>
-              </div>
-
-              <div className="mb-0 mb-md-2">
-                <ShareButton btnSize="btn-sm" />
-              </div>
-            </div>
           </article>
         </div>
-
-        <hr />
 
         <div className="author-info d-md-flex align-items-center mb-3">
           <div className="d-flex align-items-center">
             <FigureImage
               width={120}
               height={120}
-              src="/img/avatars/u5.jpg"
+              src="/img/photos/kristi_avatar120x120.webp"
               className="user-avatar rounded-circle overflow-hidden"
             />
 
             <div>
               <h6>
-                <NextLink title="Nikolas Brooten" href="#" className="link-dark" />
+                <NextLink title="Kristi Ramirez" href="#" className="link-dark" />
               </h6>
-              <span className="post-meta fs-15">Sales Manager</span>
+              <span className="post-meta fs-15">Board Certified Nurse Practitioner</span>
             </div>
           </div>
 
           <div className="mt-3 mt-md-0 ms-auto">
-            <Link href="#" passHref legacyBehavior>
+            <Link href="/" passHref legacyBehavior>
               <a className="btn btn-sm btn-soft-ash rounded-pill btn-icon btn-icon-start mb-0">
-                <i className="uil uil-file-alt" /> All Posts
+                <i className="uil uil-file-alt" /> All Blogs
               </a>
             </Link>
           </div>
         </div>
 
         <p>
-          Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet
-          risus. Maecenas faucibus mollis interdum. Fusce dapibus, tellus ac. Maecenas faucibus mollis interdum.
+          Experienced nurse with background in psychiatric and intensive care nursing, specializing in family practice.
+          Board certified in both family practice and psychiatric mental health. Committed to providing comprehensive
+          care for both physical and mental well-being.
         </p>
-
-        <SocialLinks className="nav social" />
-
-        <hr />
-
-        <h3 className="mb-6">You Might Also Like</h3>
-
-        <div className="swiper-container blog grid-view mb-16">
-          <Carousel
-            grabCursor
-            slidesPerView={2}
-            navigation={false}
-            breakpoints={{
-              0: {
-                slidesPerView: 1
-              },
-              768: {
-                slidesPerView: 2
-              }
-            }}
-          >
-            {blogs.map(({ id, ...item }) => (
-              <BlogCard1 key={id} {...item} />
-            ))}
-          </Carousel>
-        </div>
-
-        <hr />
       </div>
     </div>
   );
