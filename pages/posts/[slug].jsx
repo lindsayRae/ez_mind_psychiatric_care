@@ -139,7 +139,7 @@ export const getStaticProps = async (context) => {
   // const res = await fetch(`http://127.0.0.1:8082/api/posts?filters\[Slug\][$eq]=${slug}`);
   // changed to below from strapi forum
   // https://forum.strapi.io/t/strapi-v4-search-by-slug-instead-id/13469/50?page=2
-  const res = await fetch(`${baseURL}/api/post/find-by-slug/${slug}?populate=image`);
+  const res = await fetch(`${baseURL}/api/post/find-by-slug/${slug}?populate=image`, { cache: 'no-store' });
 
   const data = await res.json();
   console.log('############ data: ', data.data);
@@ -151,7 +151,7 @@ export const getStaticProps = async (context) => {
 // returns
 
 export const getStaticPaths = async () => {
-  const res = await fetch(`${baseURL}/api/posts`);
+  const res = await fetch(`${baseURL}/api/posts`, { cache: 'no-store' });
   const { data } = await res.json();
 
   const paths = data.map((post) => {

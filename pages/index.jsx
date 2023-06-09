@@ -22,7 +22,7 @@ const baseURL = process.env.NEXT_PUBLIC_BASEURL;
 export async function getStaticProps() {
   console.log(`${baseURL}/api/posts?populate=image`);
   //* Strapi data
-  const res = await fetch(`${baseURL}/api/posts?populate=image`);
+  const res = await fetch(`${baseURL}/api/posts?populate=image`, { cache: 'no-store' });
   let posts = await res.json();
 
   posts = posts.data;
