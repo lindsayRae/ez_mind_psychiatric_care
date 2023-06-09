@@ -40,13 +40,16 @@ const BlogCard4 = (props) => {
         </figure>
 
         <div className="card-body">
-          <div className="post-header">
-            <h2 className="post-title h3 mt-1 mb-3">{props.title}</h2>
-          </div>
-
-          <div className="post-content">
-            <p>{props.description}</p>
-          </div>
+          <Link href={`/posts/${props.slug}`} passHref legacyBehavior>
+            <div className="post-header">
+              <h2 className="post-title h3 mt-1 mb-3">{props.title}</h2>
+            </div>
+          </Link>
+          <Link href={`/posts/${props.slug}`} passHref legacyBehavior>
+            <div className="post-content">
+              <p>{props.description}</p>
+            </div>
+          </Link>
         </div>
 
         <div className="card-footer">
