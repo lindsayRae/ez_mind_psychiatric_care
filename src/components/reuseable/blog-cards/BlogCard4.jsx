@@ -7,7 +7,7 @@ import dotenv from 'dotenv';
 // configure the package
 dotenv.config();
 const baseURL = process.env.NEXT_PUBLIC_BASEURL;
-console.log('baseURL :', baseURL);
+
 // ======================================================
 const BlogCard4 = (props) => {
   console.log('props from BlogCard4:', props);

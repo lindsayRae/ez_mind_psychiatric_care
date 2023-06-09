@@ -20,7 +20,6 @@ const baseURL = process.env.NEXT_PUBLIC_BASEURL;
 
 //? getStaticProps can only be exported from a page. You can’t export it from non-page files.
 export async function getStaticProps() {
-  console.log(`${baseURL}/api/posts?populate=image`);
   //* Strapi data
   const res = await fetch(`${baseURL}/api/posts?populate=image`, { cache: 'no-store' });
   let posts = await res.json();

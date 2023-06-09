@@ -148,7 +148,6 @@ export const getStaticProps = async (context) => {
   };
 };
 // gets array of objects of all posts
-// returns
 
 export const getStaticPaths = async () => {
   const res = await fetch(`${baseURL}/api/posts`, { cache: 'no-store' });
