@@ -174,9 +174,9 @@ const BlogDetailsTemplate = () => {
         </div>
 
         <p>
-          Experienced nurse with background in psychiatric and intensive care nursing, specializing in family practice.
-          Board certified in both family practice and psychiatric mental health. Committed to providing comprehensive
-          care for both physical and mental well-being.
+          Experienced nurse practitioner with background in many areas of nursing including general medicine and
+          intensive care, specializing in psychiatry. Board certified in both family practice and psychiatric mental
+          health. Committed to providing comprehensive care for both physical and mental well-being.
         </p>
       </div>
     </div>
