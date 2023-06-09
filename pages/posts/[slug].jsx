@@ -7,11 +7,16 @@ import PageProgress from 'components/common/PageProgress';
 import NextLink from 'components/reuseable/links/NextLink';
 import FigureImage from 'components/reuseable/FigureImage';
 import MarkdownIt from 'markdown-it';
+import dotenv from 'dotenv';
+// configure the package
+dotenv.config();
+const baseURL = process.env.baseURL;
 
 const Post = ({ data }) => {
   console.log('POST DATA', data);
+
   const md = new MarkdownIt();
-  const htmlContent = md.render(data[0].content);
+  const htmlContent = md.render(data.data.content);
   return (
     <Fragment>
       <PageProgress />
@@ -36,15 +41,15 @@ const Post = ({ data }) => {
                     {/* <NextLink href="#" className="hover" title="Teamwork" /> */}
                   </div>
 
-                  <h1 className="display-1 mb-4">{data[0].title}</h1>
+                  <h1 className="display-1 mb-4">{data.data.title}</h1>
                   <ul className="post-meta mb-5">
                     <li className="post-date">
                       <i className="uil uil-calendar-alt" />
-                      <span>{data[0].date}</span>
+                      <span>{data.data.date}</span>
                     </li>
                     <li className="post-author">
                       <i className="uil uil-user" />
-                      <span>By {data[0].author}</span>
+                      <span>By {data.data.author}</span>
                     </li>
                   </ul>
                 </div>
@@ -63,7 +68,7 @@ const Post = ({ data }) => {
                     <FigureImage
                       width={960}
                       height={600}
-                      src={`/img/photos/blogs/${data[0].imageFileName}`}
+                      src={`${baseURL}${data.data.image.formats.medium.url}`}
                       className="card-img-top"
                     />
                     <div className="card-body">
@@ -125,24 +130,34 @@ const Post = ({ data }) => {
 };
 
 export default Post;
+// I did not use this solution for finding by slug, but if the below code every fails try this:
 
+// get one post by slug
 export const getStaticProps = async (context) => {
-  const id = context.params.id;
+  const slug = context.params.slug;
+  // https://strapi.io/blog/how-to-create-a-slug-system-in-strapi-v4
+  // const res = await fetch(`http://127.0.0.1:8082/api/posts?filters\[Slug\][$eq]=${slug}`);
+  // changed to below from strapi forum
+  // https://forum.strapi.io/t/strapi-v4-search-by-slug-instead-id/13469/50?page=2
+  const res = await fetch(`${baseURL}/api/post/find-by-slug/${slug}?populate=image`);
 
-  const res = await fetch(`http://127.0.0.1:8082/api/posts?filters\[Slug\][$eq]=${id}`);
-  const { data } = await res.json();
+  const data = await res.json();
+  console.log('############ data: ', data.data);
   return {
     props: { data }
   };
 };
+// gets array of objects of all posts
+// returns
 
 export const getStaticPaths = async () => {
-  const res = await fetch('http://127.0.0.1:8082/api/posts');
+  const res = await fetch(`${baseURL}/api/posts`);
   const { data } = await res.json();
-  console.log('DATA in getStaticPaths:', data);
+
   const paths = data.map((post) => {
     return {
-      params: { id: post.slug }
+      // params slug or id same as the dynamic file name so -> [id].jsx or [slug.jsx]
+      params: { slug: post.slug }
     };
   });
   return {

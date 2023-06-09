@@ -6,8 +6,6 @@ import { BlogCard4 } from 'components/reuseable/blog-cards'; // -------- data --
 //! THIS IS THE BLOG SECTION
 
 const Blog2 = ({ posts }) => {
-  console.log('POSTS from Blog2: ', posts);
-
   const carouselBreakpoints = {
     0: {
       slidesPerView: 1
@@ -39,9 +37,9 @@ const Blog2 = ({ posts }) => {
 
         <div className="swiper-container dots-closer blog grid-view mb-6">
           <Carousel grabCursor spaceBetween={0} navigation={false} breakpoints={carouselBreakpoints}>
-            {posts.map((item) => (
-              <div className="item-inner" key={item.id}>
-                <BlogCard4 {...item} />
+            {posts.map((post) => (
+              <div className="item-inner" key={post.id}>
+                <BlogCard4 {...post} />
               </div>
             ))}
           </Carousel>

@@ -3,11 +3,14 @@ import Link from 'next/link';
 import Image from 'next/image';
 import NextLink from '../links/NextLink'; // ======================================================
 import blogIMG from '../../../../public/img/photos/blogs/blog_3_960x600.webp';
-
+import dotenv from 'dotenv';
+// configure the package
+dotenv.config();
+const baseURL = process.env.baseURL;
 // ======================================================
 const BlogCard4 = (props) => {
   console.log('props from BlogCard4:', props);
-  console.log(`/posts/${props.slug}`);
+
   //const { date, image, title, category, description, className = 'card' } = props;
   return (
     <article>
@@ -18,7 +21,8 @@ const BlogCard4 = (props) => {
               <Image
                 width={560}
                 height={350}
-                src={blogIMG}
+                // src={`/${props.attributes.image.data.attributes.formats.thumbnail.url}`}
+                src={`${baseURL}${props.image.formats.thumbnail.url}`}
                 alt={props.title}
                 style={{
                   width: '100%',
