@@ -10,7 +10,7 @@ import MarkdownIt from 'markdown-it';
 import dotenv from 'dotenv';
 // configure the package
 dotenv.config();
-const baseURL = process.env.baseURL;
+const baseURL = process.env.NEXT_PUBLIC_BASEURL;
 
 const Post = ({ data }) => {
   console.log('POST DATA', data);
@@ -68,7 +68,7 @@ const Post = ({ data }) => {
                     <FigureImage
                       width={960}
                       height={600}
-                      src={`${baseURL}${data.data.image.formats.medium.url}`}
+                      src={`${baseURL}${data.data.image.url}`}
                       className="card-img-top"
                     />
                     <div className="card-body">

@@ -6,7 +6,8 @@ import blogIMG from '../../../../public/img/photos/blogs/blog_3_960x600.webp';
 import dotenv from 'dotenv';
 // configure the package
 dotenv.config();
-const baseURL = process.env.baseURL;
+const baseURL = process.env.NEXT_PUBLIC_BASEURL;
+console.log('baseURL :', baseURL);
 // ======================================================
 const BlogCard4 = (props) => {
   console.log('props from BlogCard4:', props);
@@ -22,7 +23,7 @@ const BlogCard4 = (props) => {
                 width={560}
                 height={350}
                 // src={`/${props.attributes.image.data.attributes.formats.thumbnail.url}`}
-                src={`${baseURL}${props.image.formats.thumbnail.url}`}
+                src={`${baseURL}${props.image.url}`}
                 alt={props.title}
                 style={{
                   width: '100%',
