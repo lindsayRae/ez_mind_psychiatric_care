@@ -53,37 +53,37 @@ const Navbar = (props) => {
           <ul className="navbar-nav">
             {/* ===================== services nav item ===================== */}
             <li className="nav-item ">
-              <a className="nav-link" href="/#services">
+              <Link className="nav-link" href="/#services">
                 Services
-              </a>
+              </Link>
             </li>
 
             {/*  ===================== about nav item  ===================== */}
             <li className="nav-item ">
-              <a className="nav-link" href="/#about">
+              <Link className="nav-link" href="/#about">
                 About
-              </a>
+              </Link>
             </li>
 
             {/* ===================== pricing nav item ===================== */}
             <li className="nav-item ">
-              <a className="nav-link" href="/#pricing">
+              <Link className="nav-link" href="/#pricing">
                 Pricing
-              </a>
+              </Link>
             </li>
 
             {/* ===================== faqs nav item ===================== */}
             <li className="nav-item ">
-              <a className="nav-link" href="/#faqs">
+              <Link className="nav-link" href="/#faqs">
                 FAQs
-              </a>
+              </Link>
             </li>
 
             {/* ===================== blog nav item ===================== */}
             <li className="nav-item">
-              <a className="nav-link" href="/#blog">
+              <Link className="nav-link" href="/#blog">
                 Blog
-              </a>
+              </Link>
             </li>
           </ul>
 
