@@ -14,7 +14,7 @@ const links = [
   {
     id: 5,
     icon: '',
-    url: 'https://tiktok.com'
+    url: 'https://www.tiktok.com/@user9329044612077?_op=1&_r=1&_t=8d8LdIcJ7so'
   }
 ];
 
