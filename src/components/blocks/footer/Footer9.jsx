@@ -84,7 +84,7 @@ const Footer9 = () => {
             <div className="widget">
               <h4 className="widget-title mb-3 text-white">Get in Touch</h4>
               <address>18 W. Mercer St Suite 360 Seattle, WA 98119</address>
-              <NextLink title="info@email.com" href="mailto:#" />
+              <NextLink title="info@ezmindcare.com" href="mailto:info@ezmindcare.com" />
               <br /> p. 206-319-5399
               <br /> f. 206-385-5946
             </div>
