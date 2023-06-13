@@ -53,35 +53,35 @@ const Navbar = (props) => {
           <ul className="navbar-nav">
             {/* ===================== services nav item ===================== */}
             <li className="nav-item ">
-              <a className="nav-link" href="#services">
+              <a className="nav-link" href="/#services">
                 Services
               </a>
             </li>
 
             {/*  ===================== about nav item  ===================== */}
             <li className="nav-item ">
-              <a className="nav-link" href="#about">
+              <a className="nav-link" href="/#about">
                 About
               </a>
             </li>
 
             {/* ===================== pricing nav item ===================== */}
             <li className="nav-item ">
-              <a className="nav-link" href="#pricing">
+              <a className="nav-link" href="/#pricing">
                 Pricing
               </a>
             </li>
 
             {/* ===================== faqs nav item ===================== */}
             <li className="nav-item ">
-              <a className="nav-link" href="#faqs">
+              <a className="nav-link" href="/#faqs">
                 FAQs
               </a>
             </li>
 
             {/* ===================== blog nav item ===================== */}
             <li className="nav-item">
-              <a className="nav-link" href="#blog">
+              <a className="nav-link" href="/#blog">
                 Blog
               </a>
             </li>
@@ -90,7 +90,7 @@ const Navbar = (props) => {
           {/* ============= show contact info in the small device sidebar ============= */}
           <div className="offcanvas-footer d-lg-none">
             <div>
-              <NextLink title="info@email.com" className="link-inverse" href="mailto:first.last@email.com" />
+              <NextLink title="info@ezmindcare.com" className="link-inverse" href="mailto:info@ezmindcare.com" />
               <br />
               <NextLink href="tel:206-319-5399" title="p. 206-319-5399" />
               <br />

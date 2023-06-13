@@ -1,6 +1,6 @@
 import { Fragment } from 'react'; // -------- custom component -------- //
 
-import { NavbarBlog } from 'components/blocks/navbar';
+import { Navbar } from 'components/blocks/navbar';
 import Link from 'next/link';
 
 import PageProgress from 'components/common/PageProgress';
@@ -23,7 +23,7 @@ const Post = ({ data }) => {
 
       {/* ========== header section ========== */}
       <header className="wrapper bg-soft-primary">
-        <NavbarBlog
+        <Navbar
           language
           button={<NextLink title="Contact" href="/#contact" className="btn btn-sm btn-primary rounded-pill" />}
         />
