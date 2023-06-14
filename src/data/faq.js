@@ -41,7 +41,7 @@ export const accordionList1 = [
       no: 'Seven',
       expand: false,
       heading: 'Do you accept insurance?',
-      body: `We are in credentialing process and will soon accept insurance. We can verify your insurance once that is done to determine if we are an in network provider!`
+      body: `We currently accept Aetna, Cigna, and Optum. Other plans will be accepted soon, please contact us for further information.`
     },
     {
       no: 'Eight',

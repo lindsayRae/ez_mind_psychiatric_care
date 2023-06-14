@@ -11,7 +11,7 @@ const accordions = [
     no: 'Two',
     expand: false,
     heading: 'Insurance',
-    body: 'At this time we are unable to accept insurance, however we are working on this and hope it will be coming soon. In the meantime we are able to provide a super bill if you’d like to try to submit to your insurance company for partial reimbursement as we will be considered an out of network provider. Insurance credentialing is in process - Premara, Aetna, and Kaiser.'
+    body: 'Currently we accept Aetna, Cigna, and Optum insurance plans. If you have a plan not listed above, we are likely in the credentialing process and will be able to accept your plan soon. If you’d like to be seen and we are not in network with your plan, we can provide you will a super bill for your visits to submit for reimbursement from your insurer; however, you will be responsible for the payment upfront.'
   },
   {
     no: 'Three',
