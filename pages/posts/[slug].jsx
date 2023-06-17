@@ -10,7 +10,7 @@ import MarkdownIt from 'markdown-it';
 import dotenv from 'dotenv';
 // configure the package
 dotenv.config();
-const baseURL = process.env.NEXT_PUBLIC_BASEURL;
+const baseURL = process.env.NEXT_PUBLIC_BASE_URL;
 
 const Post = ({ data }) => {
   console.log('POST DATA', data);
