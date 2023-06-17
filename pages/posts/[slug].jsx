@@ -142,7 +142,7 @@ export const getStaticProps = async (context) => {
   const res = await fetch(`${baseURL}/api/post/find-by-slug/${slug}?populate=image`, { cache: 'no-store' });
 
   const data = await res.json();
-  console.log('############ data: ', data.data);
+
   return {
     props: { data }
   };
