@@ -2,11 +2,11 @@ import dayjs from 'dayjs';
 import Link from 'next/link';
 import Image from 'next/image';
 import NextLink from '../links/NextLink'; // ======================================================
-import blogIMG from '../../../../public/img/photos/blogs/blog_3_960x600.webp';
+
 import dotenv from 'dotenv';
 // configure the package
 dotenv.config();
-const baseURL = process.env.NEXT_PUBLIC_BASEURL;
+const baseURL = process.env.NEXT_PUBLIC_BASE_URL;
 
 // ======================================================
 const BlogCard4 = (props) => {
@@ -23,7 +23,7 @@ const BlogCard4 = (props) => {
                 width={560}
                 height={350}
                 // src={`/${props.attributes.image.data.attributes.formats.thumbnail.url}`}
-                src={`${baseURL}${props.image.url}`}
+                src={`/img/photos/blogs/${props.imageURL}`}
                 alt={props.title}
                 style={{
                   width: '100%',

@@ -16,7 +16,9 @@ import { Blog2 } from 'components/blocks/blog';
 import dotenv from 'dotenv';
 // configure the package
 dotenv.config();
-const baseURL = process.env.NEXT_PUBLIC_BASEURL;
+//import { fetchAndSaveImages } from './fetchAndSaveImages';
+
+const baseURL = process.env.NEXT_PUBLIC_BASE_URL;
 
 //? getStaticProps can only be exported from a page. You can’t export it from non-page files.
 export async function getStaticProps() {
@@ -25,7 +27,7 @@ export async function getStaticProps() {
   let posts = await res.json();
 
   posts = posts.data;
-
+  //console.log(posts);
   return {
     props: {
       posts
