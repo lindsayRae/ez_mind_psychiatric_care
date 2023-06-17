@@ -19,19 +19,19 @@ const Contact10 = () => {
       },
       body: JSONdata
     };
-    console.log(options.body);
+
     // Send the form data to our forms API on Vercel and get a response.
     const response = await fetch(endpoint, options);
     const result = await response.json();
     console.log('email result: ', result);
     const alert = document.getElementById('formAlert');
     if (result) {
-      // alert.classList.remove('d-none');
+      alert.classList.remove('d-none');
       document.getElementById('contactForm').reset();
 
-      // setTimeout(() => {
-      //   alert.classList.add('d-none');
-      // }, 4000);
+      setTimeout(() => {
+        alert.classList.add('d-none');
+      }, 4000);
     } else {
       // fail.classList.remove('d-none');
       // fail.innerText =
@@ -113,7 +113,7 @@ const Contact10 = () => {
                     </div>
 
                     <div className="col-12">
-                      <p id="formAlert" style={{ color: '#687dac' }}>
+                      <p id="formAlert" className="d-none" style={{ color: '#687dac' }}>
                         Your message was sent successfully!
                       </p>
                       <input
