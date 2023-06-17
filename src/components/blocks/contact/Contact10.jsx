@@ -27,15 +27,19 @@ const Contact10 = () => {
     const alert = document.getElementById('formAlert');
     if (result) {
       alert.classList.remove('d-none');
+      alert.innerText = 'Your message was sent successfully!';
       document.getElementById('contactForm').reset();
 
       setTimeout(() => {
         alert.classList.add('d-none');
       }, 4000);
     } else {
-      // fail.classList.remove('d-none');
-      // fail.innerText =
-      //   'Oops, there was problem sending the email. Please email us directly through your email provider. contact@edocew.com';
+      alert.classList.remove('d-none');
+      alert.innerText =
+        'Oops, there was problem sending the email. Please email us directly through your email provider. info@ezmindcare.com';
+      setTimeout(() => {
+        alert.classList.add('d-none');
+      }, 6000);
     }
   };
   return (
