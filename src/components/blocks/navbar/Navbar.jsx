@@ -5,7 +5,6 @@ import useSticky from 'hooks/useSticky'; // -------- custom component -------- /
 
 import NextLink from 'components/reuseable/links/NextLink';
 import SocialLinks from 'components/reuseable/SocialLinks';
-import ListItemLink from 'components/reuseable/links/ListItemLink';
 
 import Social from './partials/Social';
 // ===================================================================
@@ -19,12 +18,6 @@ const Navbar = (props) => {
   const logo = sticky ? 'logo-dark' : logoAlt ?? 'logo-dark'; // dynamically added navbar classname
 
   const fixedClassName = 'navbar navbar-expand-lg center-nav transparent navbar-light navbar-clone fixed'; // render inner nav item links
-
-  const renderLinks = (links) => {
-    return links.map((item) => (
-      <ListItemLink href={item.url} title={item.title} linkClassName="dropdown-item" key={item.id} />
-    ));
-  }; // all main header contents
 
   const headerContent = (
     <Fragment>

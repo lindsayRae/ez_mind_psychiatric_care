@@ -10,19 +10,18 @@ const baseURL = process.env.NEXT_PUBLIC_BASE_URL;
 
 // ======================================================
 const BlogCard4 = (props) => {
-  console.log('props from BlogCard4:', props);
+  //console.log('props from BlogCard4 server?:', props);
 
   //const { date, image, title, category, description, className = 'card' } = props;
   return (
     <article>
       <div className="card">
         <figure className="card-img-top overlay overlay-1 hover-scale">
-          <Link href={`/posts/${props.slug}`} passHref legacyBehavior>
+          {/* <Link href={`/posts/${props.slug}`} passHref legacyBehavior>
             <a>
               <Image
                 width={560}
                 height={350}
-                // src={`/${props.attributes.image.data.attributes.formats.thumbnail.url}`}
                 src={`/img/photos/blogs/${props.imageURL}`}
                 alt={props.title}
                 style={{
@@ -32,7 +31,7 @@ const BlogCard4 = (props) => {
               />
               <span className="bg" />
             </a>
-          </Link>
+          </Link> */}
 
           <figcaption>
             <h5 className="from-top mb-0">Read More</h5>
