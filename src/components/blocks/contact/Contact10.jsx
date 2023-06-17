@@ -23,8 +23,20 @@ const Contact10 = () => {
     // Send the form data to our forms API on Vercel and get a response.
     const response = await fetch(endpoint, options);
     const result = await response.json();
-    console.log('email API result:', result);
-    alert(`Your email was sent!`);
+    console.log('email result: ', result);
+    const alert = document.getElementById('formAlert');
+    if (result) {
+      // alert.classList.remove('d-none');
+      document.getElementById('contactForm').reset();
+
+      // setTimeout(() => {
+      //   alert.classList.add('d-none');
+      // }, 4000);
+    } else {
+      // fail.classList.remove('d-none');
+      // fail.innerText =
+      //   'Oops, there was problem sending the email. Please email us directly through your email provider. contact@edocew.com';
+    }
   };
   return (
     <section className="wrapper bg-light" id="contact">
@@ -43,7 +55,7 @@ const Contact10 = () => {
               </div>
 
               <div className="col-lg-6">
-                <form className="contact-form needs-validation" onSubmit={handleSubmit}>
+                <form className="contact-form needs-validation" id="contactForm" onSubmit={handleSubmit}>
                   <div className="messages"></div>
                   <div className="row gx-4">
                     <div className="col-md-6">
@@ -101,6 +113,9 @@ const Contact10 = () => {
                     </div>
 
                     <div className="col-12">
+                      <p id="formAlert" style={{ color: '#687dac' }}>
+                        Your message was sent successfully!
+                      </p>
                       <input
                         type="submit"
                         value="Send message"
