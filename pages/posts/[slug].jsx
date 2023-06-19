@@ -50,7 +50,7 @@ const Post = ({ data }) => {
                     </li>
                     <li className="post-author">
                       <i className="uil uil-user" />
-                      <span>By {data.data.author}</span>
+                      <span>By Kristi Ramirez, PMHNP-BC, FNP-C</span>
                     </li>
                   </ul>
                 </div>
