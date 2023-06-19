@@ -5665,7 +5665,7 @@ fieldset:disabled .btn {
 .navbar-nav {
   --bs-nav-link-padding-x: 0;
   --bs-nav-link-padding-y: 1.2rem;
-  --bs-nav-link-font-size: 0.8rem;
+  --bs-nav-link-font-size: 0.9rem;
   --bs-nav-link-font-weight: 700;
   --bs-nav-link-color: var(--bs-navbar-color);
   --bs-nav-link-hover-color: var(--bs-navbar-hover-color);
