@@ -14,20 +14,19 @@ import { Services22 } from 'components/blocks/services';
 
 import { Blog2 } from 'components/blocks/blog';
 import dotenv from 'dotenv';
-// configure the package
 dotenv.config();
-//import { fetchAndSaveImages } from './fetchAndSaveImages';
 
 const baseURL = process.env.NEXT_PUBLIC_BASE_URL;
 
 //? getStaticProps can only be exported from a page. You can’t export it from non-page files.
 export async function getStaticProps() {
   //* Strapi data
+
   const res = await fetch(`${baseURL}/api/posts?populate=image`, { cache: 'no-store' });
   let posts = await res.json();
 
   posts = posts.data;
-  //console.log(posts);
+  console.log(posts);
   return {
     props: {
       posts
