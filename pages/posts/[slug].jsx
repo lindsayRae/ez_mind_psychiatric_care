@@ -7,6 +7,7 @@ import PageProgress from 'components/common/PageProgress';
 import NextLink from 'components/reuseable/links/NextLink';
 import FigureImage from 'components/reuseable/FigureImage';
 import MarkdownIt from 'markdown-it';
+import dayjs from 'dayjs';
 import dotenv from 'dotenv';
 // configure the package
 dotenv.config();
@@ -45,7 +46,7 @@ const Post = ({ data }) => {
                   <ul className="post-meta mb-5">
                     <li className="post-date">
                       <i className="uil uil-calendar-alt" />
-                      <span>{data.data.date}</span>
+                      <span>{dayjs(data.data.date).format('MMM DD YYYY')}</span>
                     </li>
                     <li className="post-author">
                       <i className="uil uil-user" />

@@ -55,7 +55,7 @@ const BlogCard4 = (props) => {
           <ul className="post-meta d-flex mb-0">
             <li className="post-date">
               <i className="uil uil-calendar-alt" />
-              <span>{dayjs(props.date).format('DD MMM YYYY')}</span>
+              <span>{dayjs(props.date).format('MMM DD YYYY')}</span>
             </li>
 
             <li className="post-comments">
