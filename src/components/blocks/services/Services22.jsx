@@ -44,9 +44,9 @@ const Services22 = () => {
       <div className="row" id="services">
         <div className="col-md-10 offset-md-1 col-lg-8 offset-lg-2 mx-auto text-center">
           {/* <h2 className="fs-16 text-uppercase text-muted mb-3">Services</h2> */}
-          <h3 className="display-3 mb-10 px-xl-10 px-xxl-15">
+          <h2 className="display-3 mb-10 px-xl-10 px-xxl-15">
             Our Services are <span className="underline-3 style-2 yellow">Inclusive</span> and in a Safe Environment
-          </h3>
+          </h2>
         </div>
       </div>
       <div className="row ">
@@ -107,7 +107,7 @@ const Services22 = () => {
               <Compare />
             </div>
             <div>
-              <h4 className="mb-1">Medication Management</h4>
+              <h3 className="mb-1 h4">Medication Management</h3>
               <p>ADHD, Depression, Anxiety </p>
             </div>
           </a>
@@ -126,7 +126,7 @@ const Services22 = () => {
               <Puzzle />
             </div>
             <div>
-              <h4 className="mb-1">Lifestyle Coaching</h4>
+              <h3 className="mb-1 h4">Lifestyle Coaching</h3>
               <p>Sleep, Nutrition, and Exercise</p>
             </div>
           </a>
@@ -145,7 +145,7 @@ const Services22 = () => {
               <VideoCall className="icon-svg-sm solid-mono text-green me-4" />
             </div>
             <div>
-              <h4 className="mb-1">Supportive Therapy</h4>
+              <h3 className="mb-1 h4">Supportive Therapy</h3>
               <p>Problem/Solution Focused</p>
             </div>
           </a>

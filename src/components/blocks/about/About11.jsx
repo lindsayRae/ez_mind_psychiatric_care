@@ -36,7 +36,7 @@ const About11 = () => {
               </div>
 
               <div>
-                <h4>{title}</h4>
+                <h3>{title}</h3>
                 <p className="mb-2">{description}</p>
               </div>
             </div>
