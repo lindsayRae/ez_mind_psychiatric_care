@@ -2,7 +2,7 @@ import Accordion from 'components/reuseable/accordion'; // -------- data -------
 
 const accordions = [
   {
-    no: 'One',
+    no: 'Five',
     expand: false,
     heading: 'Read more...',
     body: `
@@ -13,7 +13,7 @@ const accordions = [
 
 const AccordionList = () => {
   return (
-    <div className="accordion accordion-wrapper" id="accordionExample">
+    <div className="accordion accordion-wrapper" id="accordionAbout">
       {accordions.map((item) => (
         <Accordion type="plain" key={item.no} {...item} />
       ))}

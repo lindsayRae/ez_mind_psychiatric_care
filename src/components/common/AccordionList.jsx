@@ -29,7 +29,7 @@ const accordions = [
 
 const AccordionList = () => {
   return (
-    <div className="accordion accordion-wrapper" id="accordionExample">
+    <div className="accordion accordion-wrapper" id="accordionFAQ">
       {accordions.map((item) => (
         <Accordion type="plain" key={item.no} {...item} />
       ))}
