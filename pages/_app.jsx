@@ -79,7 +79,28 @@ function MyApp({ Component, pageProps }) {
       <Head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>EZ Mind Psychiatric Care</title>
+        <title> EZ Mind Psychiatric Care - Holistic Mental Health Practitioner in Washington State</title>
+        <meta
+          name="description"
+          content="At EZ Mind Psychiatric Care, we provide easy access to the care you deserve. Our goal is to meet you where you are in your mental health journey, viewing you as a whole person rather than just a disease process. Our holistic approach addresses the root causes of your symptoms, helping you reduce them and achieve true healing. Discover optimal physical and mental health with our comprehensive range of services."
+        />
+        <meta
+          name="keywords"
+          content="mental health practitioner, psychiatric care, holistic approach, Washington State, mental health journey, whole person, disease process, root cause, reduce symptoms, healing, physical health, mental health, comprehensive services"
+        />
+        {/* Open Graph Meta Tags  */}
+        <meta property="og:title" content="Holistic Mental Health Practitioner in Washington State" />
+        <meta property="og:type" content="website" />
+
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta property="og:image" content="https://www.ezmindcare.com/img/photos/og_image.png" />
+        <meta property="og:url" content="https://www.ezmindcare.com/" />
+
+        <meta
+          property="og:description"
+          content="At EZ Mind Psychiatric Care, we provide easy access to the care you deserve. Our goal is to meet you where you are in your mental health journey, viewing you as a whole person rather than just a disease process. Our holistic approach addresses the root causes of your symptoms, helping you reduce them and achieve true healing. Discover optimal physical and mental health with our comprehensive range of services in Washington State."
+        />
       </Head>
       <Component {...pageProps} />
     </Fragment>
