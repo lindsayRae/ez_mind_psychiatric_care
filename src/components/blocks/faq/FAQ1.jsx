@@ -13,7 +13,7 @@ const FAQ1 = () => {
         If you don't see an answer to your question, you can send us an email from our contact form.
       </h3>
 
-      <div className="accordion-wrapper" id="accordion">
+      <div className="accordion-wrapper" id="accordionFAQ">
         <div className="row">
           {accordionList1.map((items, i) => {
             return (

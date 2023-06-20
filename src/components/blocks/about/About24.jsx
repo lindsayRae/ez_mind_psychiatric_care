@@ -17,7 +17,9 @@ const About24 = () => {
                 style={{ borderRadius: '50%' }}
                 src="/img/photos/kristi610x610.webp"
                 srcSet="/img/photos/kristi610x610.webp 2x"
-                alt="kristi headsho"
+                alt="kristi headshot"
+                width={595}
+                height={595}
               />
             </div>
           </div>

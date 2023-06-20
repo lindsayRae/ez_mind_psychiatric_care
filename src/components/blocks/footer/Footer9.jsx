@@ -17,6 +17,8 @@ const Footer9 = () => {
                 src="/img/logo_green250x70.png"
                 // srcSet="/img/logo-light@2x.png 2x"
                 alt="EZ Mind Care logo"
+                width={250}
+                height={70}
               />
 
               <p className="mb-4">
