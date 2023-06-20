@@ -1,8 +1,3 @@
-// -------- icons -------- //
-import Home from 'icons/lineal/Home';
-import BriefcaseTwo from 'icons/lineal/BriefcaseTwo';
-import ShoppingBasket from 'icons/lineal/ShoppingBasket'; // used in the pricing-1, pricing-3 block
-
 export const pricingList1 = [
   {
     planName: 'Initial Visit',

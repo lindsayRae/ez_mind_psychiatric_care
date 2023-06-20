@@ -2,7 +2,7 @@ import Accordion from 'components/reuseable/accordion'; // -------- data -------
 
 const accordions = [
   {
-    no: 'Five',
+    no: 'Twenty',
     expand: false,
     heading: 'Read more...',
     body: `
