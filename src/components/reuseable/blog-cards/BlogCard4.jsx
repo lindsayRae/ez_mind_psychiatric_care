@@ -45,7 +45,16 @@ const BlogCard4 = (props) => {
           </Link>
           <Link href={`/posts/${props.slug}`} passHref legacyBehavior>
             <div className="post-content">
-              <p>{props.description}</p>
+              <p
+                style={{
+                  display: '-webkit-box',
+                  WebkitLineClamp: '3',
+                  WebkitBoxOrient: 'vertical',
+                  overflow: 'hidden'
+                }}
+              >
+                {props.description}
+              </p>
             </div>
           </Link>
         </div>

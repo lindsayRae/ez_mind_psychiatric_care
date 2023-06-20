@@ -4,7 +4,7 @@
 .card {
   box-shadow: $box-shadow-with-border;
   border: 0;
-  &[class*="bg-"] {
+  &[class*='bg-'] {
     box-shadow: none !important;
   }
 }
@@ -25,10 +25,10 @@
     }
   }
 }
-[class*="card-border-"] {
+[class*='card-border-'] {
   position: relative;
   &:after {
-    content: "";
+    content: '';
     position: absolute;
   }
 }
@@ -46,12 +46,12 @@
     border-top-left-radius: $card-border-radius;
     border-top-right-radius: $card-border-radius;
   }
-  &[class*="border-soft-"]:after {
+  &[class*='border-soft-']:after {
     border-top-width: $border-width * 6;
     border-bottom-width: calc(#{$card-border-radius} - #{$border-width * 6});
   }
 }
-  
+
 .card-border-bottom {
   &:after {
     bottom: 0;
@@ -66,7 +66,7 @@
     border-bottom-left-radius: $card-border-radius;
     border-bottom-right-radius: $card-border-radius;
   }
-  &[class*="border-soft-"]:after {
+  &[class*='border-soft-']:after {
     border-bottom-width: $border-width * 6;
     border-top-width: calc(#{$card-border-radius} - #{$border-width * 6});
   }
@@ -85,7 +85,7 @@
     border-top-left-radius: $card-border-radius;
     border-bottom-left-radius: $card-border-radius;
   }
-  &[class*="border-soft-"]:after {
+  &[class*='border-soft-']:after {
     border-left-width: $border-width * 6;
     border-right-width: calc(#{$card-border-radius} - #{$border-width * 6});
   }
@@ -104,7 +104,7 @@
     border-top-right-radius: $card-border-radius;
     border-bottom-right-radius: $card-border-radius;
   }
-  &[class*="border-soft-"]:after {
+  &[class*='border-soft-']:after {
     border-right-width: $border-width * 6;
     border-left-width: calc(#{$card-border-radius} - #{$border-width * 6});
   }
