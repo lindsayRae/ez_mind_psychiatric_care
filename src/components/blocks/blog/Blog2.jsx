@@ -1,8 +1,6 @@
 import Carousel from 'components/reuseable/Carousel';
 import { BlogCard4 } from 'components/reuseable/blog-cards'; // -------- data -------- //
 
-//import { blogList } from 'data/demo-11';
-
 //! THIS IS THE BLOG SECTION
 
 const Blog2 = ({ posts }) => {
