@@ -10,7 +10,7 @@ const baseURL = process.env.NEXT_PUBLIC_BASE_URL;
 
 // ======================================================
 const BlogCard4 = (props) => {
-  console.log(props);
+  console.log(props.image.formats.medium.url);
   //const { date, image, title, category, description, className = 'card' } = props;
   return (
     <article>
@@ -21,7 +21,7 @@ const BlogCard4 = (props) => {
               <Image
                 width={560}
                 height={350}
-                src={`${baseURL}${props.image.formats.medium.url}`}
+                src={props.image.formats.small.url}
                 alt={props.title}
                 style={{
                   width: '100%',

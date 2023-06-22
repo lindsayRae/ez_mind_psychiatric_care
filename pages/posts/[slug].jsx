@@ -14,8 +14,6 @@ dotenv.config();
 const baseURL = process.env.NEXT_PUBLIC_BASE_URL;
 
 const Post = ({ data }) => {
-  console.log('POST DATA', data);
-
   const md = new MarkdownIt();
   const htmlContent = md.render(data.data.content);
   return (
@@ -66,12 +64,7 @@ const Post = ({ data }) => {
               <div className="col-lg-10 mx-auto">
                 <div className="blog single mt-n17">
                   <div className="card shadow-lg">
-                    <FigureImage
-                      width={960}
-                      height={600}
-                      src={`${baseURL}${data.data.image.url}`}
-                      className="card-img-top"
-                    />
+                    <FigureImage width={960} height={600} src={data.data.image.url} className="card-img-top" />
                     <div className="card-body">
                       <div className="classic-view">
                         <article className="post">
@@ -140,6 +133,7 @@ export const getStaticProps = async (context) => {
   // const res = await fetch(`http://127.0.0.1:8082/api/posts?filters\[Slug\][$eq]=${slug}`);
   // changed to below from strapi forum
   // https://forum.strapi.io/t/strapi-v4-search-by-slug-instead-id/13469/50?page=2
+
   const res = await fetch(`${baseURL}/api/post/find-by-slug/${slug}?populate=image`, { cache: 'no-store' });
 
   const data = await res.json();
