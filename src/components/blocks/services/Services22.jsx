@@ -212,8 +212,8 @@ Things of focus are typically nutrition, exercise, sleep, substance use, etc. "
           <p>
             Evaluations are for treatment purposes only. <br /> We are an outpatient treatment facility, we DO NOT offer
             crisis support. <br />
-            In case of an emergency please call 911, call suicide hotline (988){' '}
-            <NextLink href="www.988lifeline.org" target="_blank" title="988lifeline.org" /> <br />
+            In case of an emergency, please call 911, call suicide hotline (988),
+            <br />
             or go to nearest Emergency Department.{' '}
           </p>
         </div>

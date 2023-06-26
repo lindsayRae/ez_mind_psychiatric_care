@@ -21,8 +21,8 @@ export const aboutList3 = [
   {
     id: 3,
     title: 'Our Values',
-    description: `Authenticity
-    Empathy
+    description: `Authenticity,
+    Empathy,
     Inclusivity`
   }
 ]; // used in the about-20, about-21 block

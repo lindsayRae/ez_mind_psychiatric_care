@@ -49,13 +49,6 @@ export const accordionList1 = [
       heading: 'Do you accept insurance?',
       body: `We currently accept Aetna, Cigna, and Optum. Other plans will be accepted soon, please contact us for further information.`,
       parent: 'accordionFAQ'
-    },
-    {
-      no: 'Eight',
-      expand: false,
-      heading: 'What if I want to see you but want to use my insurance and you aren’t in network?',
-      body: ` We would be happy to provide you with a super bill so you can submit it to your insurance company for partial reimbursement, however you would be responsible for the up front cost.`,
-      parent: 'accordionFAQ'
     }
   ],
   [

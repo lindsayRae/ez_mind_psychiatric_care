@@ -1,8 +1,8 @@
 import AccordionListAbout from 'components/common/AccordionListAbout';
 const list = [
-  'Board Certified RN, BSN 2008',
+  'Board Certified Psychiatric Nurse Practitioner, Post Masters 2020',
   'Board Certified Family Nurse Practitioner, MSN 2012',
-  'Board Certified Psychiatric Nurse Practitioner, Post Masters 2020'
+  'Board Certified RN, BSN 2008'
 ];
 
 const About24 = () => {

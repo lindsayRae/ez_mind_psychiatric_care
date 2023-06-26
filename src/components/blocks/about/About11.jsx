@@ -20,7 +20,7 @@ const About11 = () => {
             It is our goal to meet you where you are in your mental health journey.  We view you as a whole person not a
             disease process.  We know that often our mental health is affected by many factors and we are here to help
             you navigate and get to the root cause to reduce your symptoms and help you heal.  We offer holistic care
-            and want to help you optimize your health both physically and mentally.
+            and want to help you optimize your health, both physically and mentally.
           </p>
         </div>
       </div>
