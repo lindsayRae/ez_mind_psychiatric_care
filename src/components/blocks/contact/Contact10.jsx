@@ -1,47 +1,56 @@
 import Email from 'icons/lineal/Email';
+import { useState } from 'react';
 
 const Contact10 = () => {
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [message, setMessage] = useState('');
+  const [errors, setErrors] = useState(false);
+  const [errors2, setErrors2] = useState(false);
+  const [success, setSuccess] = useState(false);
   const handleSubmit = async (e) => {
     e.preventDefault();
+    // Add your logic to handle the form submission here
+    // You can use an API endpoint to send the form data to the server or perform any other action
 
-    const data = {
-      name: e.target.frm_name.value,
-      email: e.target.frm_email.value,
-      message: e.target.frm_message.value
-    };
-
-    const JSONdata = JSON.stringify(data);
-    const endpoint = '/sendEmail';
-    const options = {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      body: JSONdata
-    };
-
-    // Send the form data to our forms API on Vercel and get a response.
-    const response = await fetch(endpoint, options);
-    const result = await response.json();
-    console.log('email result: ', result);
-    const alert = document.getElementById('formAlert');
-    if (result) {
-      alert.classList.remove('d-none');
-      alert.innerText = 'Your message was sent successfully!';
-      document.getElementById('contactForm').reset();
-
-      setTimeout(() => {
-        alert.classList.add('d-none');
-      }, 4000);
-    } else {
-      alert.classList.remove('d-none');
-      alert.innerText =
-        'Oops, there was problem sending the email. Please email us directly through your email provider. info@ezmindcare.com';
-      setTimeout(() => {
-        alert.classList.add('d-none');
-      }, 6000);
+    let emailBody = { name, email, message };
+    if (!name || !email || !message) {
+      setErrors(true);
+      return;
     }
+    try {
+      const response = await fetch('/api/sendEmail', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(emailBody)
+      });
+
+      if (response.ok) {
+        console.log('Email sent successfully');
+        // Reset form fields
+        setName('');
+        setEmail('');
+        setMessage('');
+        setSuccess(true);
+      } else {
+        console.error('Error sending email');
+        setErrors2(true);
+      }
+    } catch (error) {
+      console.error('Error sending email:', error);
+      setErrors2(true);
+    }
+    setTimeout(() => {
+      setErrors2(false);
+      setSuccess(false);
+      setName('');
+      setEmail('');
+      setMessage('');
+    }, 5000);
   };
+
   return (
     <section className="wrapper bg-light" id="contact">
       <div className="container py-14 py-md-16">
@@ -67,15 +76,12 @@ const Contact10 = () => {
                         <input
                           required
                           type="text"
-                          name="name"
-                          id="frm_name"
-                          placeholder="Jane"
+                          id="name"
+                          value={name}
+                          onChange={(e) => setName(e.target.value)}
                           className="form-control border-0"
-                          data-error="First Name is required."
                         />
-
-                        <label htmlFor="frm_name">Name *</label>
-                        <div className="invalid-feedback">Please enter your name.</div>
+                        <label htmlFor="name">Name *</label>
                       </div>
                     </div>
 
@@ -84,16 +90,12 @@ const Contact10 = () => {
                         <input
                           required
                           type="email"
-                          name="email"
-                          id="frm_email"
+                          id="email"
+                          value={email}
+                          onChange={(e) => setEmail(e.target.value)}
                           className="form-control border-0"
-                          placeholder="jane.doe@example.com"
-                          data-error="Valid email is required."
                         />
-
                         <label htmlFor="frm_email">Email *</label>
-                        <div className="valid-feedback">Looks good!</div>
-                        <div className="invalid-feedback">Please provide a valid email address.</div>
                       </div>
                     </div>
 
@@ -101,28 +103,34 @@ const Contact10 = () => {
                       <div className="form-floating mb-4">
                         <textarea
                           required
-                          name="message"
-                          id="frm_message"
-                          placeholder="Your message"
+                          value={message}
+                          onChange={(e) => setMessage(e.target.value)}
+                          id="message"
                           className="form-control border-0"
                           style={{
                             height: 150
                           }}
                         />
 
-                        <label htmlFor="frm_message">Message *</label>
-                        <div className="valid-feedback">Looks good!</div>
-                        <div className="invalid-feedback">Please enter your messsage.</div>
+                        <label htmlFor="message">Message *</label>
                       </div>
                     </div>
 
                     <div className="col-12">
-                      <p id="formAlert" className="d-none" style={{ color: '#687dac' }}>
-                        Your message was sent successfully!
-                      </p>
+                      {errors && <p style={{ color: '#b36161' }}>Please complete all form fields</p>}
+                      {errors2 && (
+                        <p style={{ color: '#b36161' }}>
+                          There was an issue sending your email. Please email is directly at info@ezmindcare.com
+                        </p>
+                      )}
+                      {success && (
+                        <p style={{ color: '#687dac' }}>
+                          Your message was sent successfully! We will be in touch soon.
+                        </p>
+                      )}
                       <input
                         type="submit"
-                        value="Send message"
+                        value="Send Message"
                         className="btn btn-outline-primary rounded-pill btn-send mb-3"
                       />
                     </div>
