@@ -30,7 +30,8 @@ export async function getStaticProps() {
   return {
     props: {
       posts
-    }
+    },
+    revalidate: 600 // In seconds
   };
 }
 const Home = ({ posts }) => {

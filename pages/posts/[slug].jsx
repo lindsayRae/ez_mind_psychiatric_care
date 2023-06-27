@@ -139,7 +139,8 @@ export const getStaticProps = async (context) => {
   const data = await res.json();
 
   return {
-    props: { data }
+    props: { data },
+    revalidate: 600 // In seconds
   };
 };
 // gets array of objects of all posts
@@ -156,6 +157,6 @@ export const getStaticPaths = async () => {
   });
   return {
     paths,
-    fallback: false
+    fallback: 'blocking'
   };
 };
