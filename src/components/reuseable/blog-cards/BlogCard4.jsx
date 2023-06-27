@@ -3,14 +3,8 @@ import Link from 'next/link';
 import Image from 'next/image';
 import NextLink from '../links/NextLink'; // ======================================================
 
-import dotenv from 'dotenv';
-// configure the package
-dotenv.config();
-const baseURL = process.env.NEXT_PUBLIC_BASE_URL;
-
 // ======================================================
 const BlogCard4 = (props) => {
-  console.log(props.image.formats.medium.url);
   //const { date, image, title, category, description, className = 'card' } = props;
   return (
     <article>

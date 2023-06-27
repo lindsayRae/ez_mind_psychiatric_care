@@ -11,6 +11,7 @@ import { Hero4 } from 'components/blocks/hero';
 import { Navbar } from 'components/blocks/navbar';
 import { Pricing3 } from 'components/blocks/pricing';
 import { Services22 } from 'components/blocks/services';
+import { Testimonial2 } from 'components/blocks/testimonial';
 
 import { Blog2 } from 'components/blocks/blog';
 import dotenv from 'dotenv';
@@ -54,8 +55,33 @@ const Home = ({ posts }) => {
 
           <div className="container py-14 py-md-16">
             <Services22 />
-            <hr className="" />
+            {/* <hr className="" /> */}
+          </div>
+        </section>
+        <section className="wrapper bg-soft-primary ">
+          <div className="container py-14 py-md-16">
+            <div className="row">
+              <div className="col-md-10 col-lg-8 mt-6">
+                <p>
+                  Evaluations are for treatment purposes only. <br /> We are an outpatient treatment facility, we DO NOT
+                  offer crisis support. <br />
+                  In case of an emergency, please call 911, call suicide hotline (988),
+                  <br />
+                  or go to nearest Emergency Department.{' '}
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section className="wrapper bg-light wrapper-border">
+          <div className="container pt-15 pt-md-17 pb-13 pb-md-15 mt-18 mt-md-23 mb-n16 mb-md-n18">
+            <Testimonial2 />
+          </div>
+        </section>
+        <section className="wrapper bg-light">
+          <div className="container py-14 py-md-16">
             <About11 />
+            <hr className="" />
             <About24 />
           </div>
         </section>
@@ -63,9 +89,15 @@ const Home = ({ posts }) => {
         <section className="wrapper bg-light position-relative">
           <div className="container py-14 py-md-16">
             <Pricing3 />
-            <hr className="my-14 my-md-17" />
+          </div>
+        </section>
+        <section className="wrapper bg-soft-primary position-relative">
+          <div className="container py-14 py-md-16">
             <FAQ1 />
-            <hr className="my-14 my-md-17" />
+          </div>
+        </section>
+        <section className="wrapper bg-light position-relative">
+          <div className="container py-14 py-md-16">
             <Blog2 posts={posts} />
             <Contact10 />
           </div>

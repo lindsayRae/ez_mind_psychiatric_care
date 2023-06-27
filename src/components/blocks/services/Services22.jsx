@@ -206,8 +206,8 @@ Things of focus are typically nutrition, exercise, sleep, substance use, etc. "
           </div>
         </div>
       </div>
-      <hr className="my-8" />
-      <div className="row">
+      {/* <hr className="my-8" /> */}
+      {/* <div className="row">
         <div className="col-md-10 col-lg-8 mt-6">
           <p>
             Evaluations are for treatment purposes only. <br /> We are an outpatient treatment facility, we DO NOT offer
@@ -217,7 +217,7 @@ Things of focus are typically nutrition, exercise, sleep, substance use, etc. "
             or go to nearest Emergency Department.{' '}
           </p>
         </div>
-      </div>
+      </div> */}
     </Fragment>
   );
 };
