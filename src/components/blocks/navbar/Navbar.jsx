@@ -7,6 +7,7 @@ import NextLink from 'components/reuseable/links/NextLink';
 import SocialLinks from 'components/reuseable/SocialLinks';
 
 import Social from './partials/Social';
+
 // ===================================================================
 
 // ===================================================================
@@ -15,9 +16,34 @@ const Navbar = (props) => {
   const sticky = useSticky(350);
   const navbarRef = useRef(null); // dynamically render the logo
 
-  const logo = sticky ? 'logo-dark' : logoAlt ?? 'logo-dark'; // dynamically added navbar classname
+  //const logo = sticky ? 'logo-dark' : logoAlt ?? 'logo-dark'; // dynamically added navbar classname
 
   const fixedClassName = 'navbar navbar-expand-lg center-nav transparent navbar-light navbar-clone fixed'; // render inner nav item links
+  const ScrollLink = ({ href, sectionId, children }) => {
+    const handleScroll = (e) => {
+      e.preventDefault();
+      const section = document.getElementById(sectionId);
+      const offset = 250; // Adjust this value to your desired offset
+
+      if (section) {
+        section.scrollIntoView({
+          behavior: 'smooth',
+          block: 'start',
+          inline: 'nearest',
+          // Subtract the offset from the top position
+          // to create the desired scroll position
+          //top: section.getBoundingClientRect().top - offset
+          top: '250'
+        });
+      }
+    };
+
+    return (
+      <a href={href} className="nav-link" onClick={handleScroll}>
+        {children}
+      </a>
+    );
+  };
 
   const headerContent = (
     <Fragment>
@@ -48,37 +74,44 @@ const Navbar = (props) => {
           <ul className="navbar-nav">
             {/* ===================== services nav item ===================== */}
             <li className="nav-item ">
-              <Link className="nav-link" href="/#services">
+              <ScrollLink href="/#services" sectionId="services">
                 Services
-              </Link>
+              </ScrollLink>
+            </li>
+
+            {/* ===================== testimonials nav item ===================== */}
+            <li className="nav-item ">
+              <ScrollLink href="/#testimonials" sectionId="testimonials">
+                Testimonials
+              </ScrollLink>
             </li>
 
             {/*  ===================== about nav item  ===================== */}
             <li className="nav-item ">
-              <Link className="nav-link" href="/#about">
+              <ScrollLink href="/#about" sectionId="about">
                 About
-              </Link>
+              </ScrollLink>
             </li>
 
             {/* ===================== pricing nav item ===================== */}
             <li className="nav-item ">
-              <Link className="nav-link" href="/#pricing">
+              <ScrollLink href="/#pricing" sectionId="pricing">
                 Pricing
-              </Link>
+              </ScrollLink>
             </li>
 
             {/* ===================== faqs nav item ===================== */}
             <li className="nav-item ">
-              <Link className="nav-link" href="/#faqs">
+              <ScrollLink href="/#faqs" sectionId="faqs">
                 FAQs
-              </Link>
+              </ScrollLink>
             </li>
 
             {/* ===================== blog nav item ===================== */}
             <li className="nav-item">
-              <Link className="nav-link" href="/#blog">
+              <ScrollLink href="/#blog" sectionId="blog">
                 Blog
-              </Link>
+              </ScrollLink>
             </li>
           </ul>
 
