@@ -8,8 +8,7 @@ const nextConfig = {
   images: {
     //domains: [process.env.STRAPI_ASSETS_BASE_URL],
     unoptimized: true
-  },
-  output: 'export'
+  }
 };
 
 module.exports = nextConfig;
