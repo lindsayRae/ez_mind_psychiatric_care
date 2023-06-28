@@ -19,7 +19,7 @@ footer.bg-dark,
   background-image: url(/img/photos/hero_2000x1692.webp);
 }
 #testimonialImage {
-  background-image: url(/img/photos/tm1.jpg);
+  background-image: url(/img/photos/tm1.webp);
 }
 .image-wrapper {
   background-repeat: no-repeat;
@@ -101,10 +101,10 @@ footer.bg-dark,
 }
 @media (max-width: 575.98px) {
   #heroImage {
-    background-image: url(/img/photos/hero_576x482.png);
+    background-image: url(/img/photos/hero_576x482.webp);
   }
   #testimonialImage {
-    background-image: url(/img/photos/testimonial_576x488.png);
+    background-image: url(/img/photos/tm1_576x488.webp);
   }
   .bg-xs-none {
     background-image: none !important;
