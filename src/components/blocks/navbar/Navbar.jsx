@@ -47,7 +47,7 @@ const Navbar = (props) => {
 
   const headerContent = (
     <Fragment>
-      <div className="navbar-brand w-100">
+      <div className="navbar-brand w-100" style={{ paddingTop: '12px', paddingBottom: '12px' }}>
         {/* <Link href={`/`}>EZ Mind Psychiatric Care</Link> */}
         <NextLink
           href="/"
@@ -56,9 +56,9 @@ const Navbar = (props) => {
               alt="logo"
               src={`/img/logo_green250x70.png`}
               // srcSet={`/img/${logo}@2x.png 2x`}
-              style={{ paddingTop: '20px', paddingBottom: '20px' }}
-              width={'300'}
-              height={'auto'}
+
+              width={'auto'}
+              height={'70'}
             />
           }
         />
