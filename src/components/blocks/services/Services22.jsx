@@ -3,8 +3,8 @@ import { Fragment } from 'react'; // -------- icons -------- //
 import Puzzle from 'icons/solid-mono/Puzzle';
 import Compare from 'icons/solid-mono/Compare';
 import VideoCall from 'icons/solid-mono/VideoCall';
+import Image from 'next/image';
 
-import NextLink from 'components/reuseable/links/NextLink';
 const listOG = [
   'ADHD',
   'Anxiety',
@@ -158,7 +158,13 @@ const Services22 = () => {
           <div className="row gx-lg-8 gx-xl-12 gy-10 align-items-center">
             <div className="col-lg-6">
               <figure className="rounded shadow-lg">
-                <img src="/img/photos/medication610x410.webp" srcSet="/img/photos/medication1220x880.webp" alt="" />
+                <Image
+                  src="/img/photos/medication610x410.webp"
+                  width={500}
+                  height={500}
+                  alt="Medication"
+                  priority={false}
+                />
               </figure>
             </div>
 
@@ -177,7 +183,13 @@ const Services22 = () => {
           <div className="row gx-lg-8 gx-xl-12 gy-10 align-items-center">
             <div className="col-lg-6 order-lg-2">
               <figure className="rounded shadow-lg">
-                <img src="/img/photos/coaching610x410.webp" srcSet="/img/photos/coaching1220x880.webp" alt="" />
+                <Image
+                  src="/img/photos/coaching610x410.webp"
+                  width={500}
+                  height={500}
+                  alt="Coaching"
+                  priority={false}
+                />
               </figure>
             </div>
 
@@ -194,7 +206,13 @@ Things of focus are typically nutrition, exercise, sleep, substance use, etc. "
           <div className="row gx-lg-8 gx-xl-12 gy-10 align-items-center">
             <div className="col-lg-6">
               <figure className="rounded shadow-lg">
-                <img src="/img/photos/support610x410.webp" srcSet="/img/photos/support1220x880.webp" alt="" />
+                <Image
+                  src="/img/photos/support610x410.webp"
+                  width={500}
+                  height={500}
+                  alt="Support Therapy"
+                  priority={false}
+                />
               </figure>
             </div>
 
