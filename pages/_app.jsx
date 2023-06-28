@@ -17,6 +17,8 @@ import 'glightbox/dist/css/glightbox.css'; // custom scrollcue css
 import 'plugins/scrollcue/scrollCue.css'; // Bootstrap and custom scss
 
 import 'assets/scss/style.scss';
+import dotenv from 'dotenv';
+dotenv.config();
 
 function MyApp({ Component, pageProps }) {
   const { pathname } = useRouter();
@@ -100,6 +102,17 @@ function MyApp({ Component, pageProps }) {
         <meta
           property="og:description"
           content="At EZ Mind Psychiatric Care, we provide easy access to the care you deserve. Our goal is to meet you where you are in your mental health journey, viewing you as a whole person rather than just a disease process. Our holistic approach addresses the root causes of your symptoms, helping you reduce them and achieve true healing. Discover optimal physical and mental health with our comprehensive range of services in Washington State."
+        />
+        {/* Google tag (gtag.js) */}
+        <script async src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}`} />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', '${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}')`
+          }}
         />
       </Head>
       <Component {...pageProps} />

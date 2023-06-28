@@ -48,7 +48,6 @@ const Navbar = (props) => {
   const headerContent = (
     <Fragment>
       <div className="navbar-brand w-100" style={{ paddingTop: '12px', paddingBottom: '12px' }}>
-        {/* <Link href={`/`}>EZ Mind Psychiatric Care</Link> */}
         <NextLink
           href="/"
           title={
@@ -118,6 +117,23 @@ const Navbar = (props) => {
           {/* ============= show contact info in the small device sidebar ============= */}
           <div className="offcanvas-footer d-lg-none">
             <div>
+              <div style={{ marginBottom: '15px' }}>
+                <a
+                  style={{ display: 'block' }}
+                  href="https://www.zocdoc.com/practice/ez-mind-psychiatric-care-90010"
+                  className="zd-plugin"
+                  data-type="book-button"
+                  data-practice-id={90010}
+                  title="EZ Mind Psychiatric Care"
+                >
+                  <img
+                    src="https://offsiteSchedule.zocdoc.com/images/remote/zd_bookonline_162x48.png"
+                    alt="EZ Mind Psychiatric Care"
+                    title="EZ Mind Psychiatric Care"
+                    style={{ border: 0 }}
+                  />
+                </a>
+              </div>
               <NextLink title="info@ezmindcare.com" className="link-inverse" href="mailto:info@ezmindcare.com" />
               <br />
               <NextLink href="tel:206-319-5399" title="p. 206-319-5399" />
@@ -132,7 +148,27 @@ const Navbar = (props) => {
       <div className={navOtherClass}>
         <ul className="navbar-nav flex-row align-items-center ms-auto">
           {/* ============= contact button ============= */}
-          {button && <li className="nav-item d-none d-md-block">{button}</li>}
+          {button && (
+            <li className="nav-item d-none d-md-block">
+              <div>
+                <a
+                  style={{ display: 'block' }}
+                  href="https://www.zocdoc.com/practice/ez-mind-psychiatric-care-90010"
+                  className="zd-plugin"
+                  data-type="book-button"
+                  data-practice-id={90010}
+                  title="EZ Mind Psychiatric Care"
+                >
+                  <img
+                    src="https://offsiteSchedule.zocdoc.com/images/remote/zd_bookonline_162x48.png"
+                    alt="EZ Mind Psychiatric Care"
+                    title="EZ Mind Psychiatric Care"
+                    style={{ border: 0 }}
+                  />
+                </a>
+              </div>
+            </li>
+          )}
 
           {/* ============= social icons link ============= */}
           {social && <Social />}
