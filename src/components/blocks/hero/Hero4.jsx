@@ -1,15 +1,19 @@
 import { slideInDownAnimate } from 'utils/animation';
 import NextLink from 'components/reuseable/links/NextLink';
+import Image from 'next/image';
 
 const Hero4 = () => {
   return (
     <section className="wrapper bg-light position-relative min-vh-70 d-lg-flex align-items-center">
       <div
-        style={{
-          backgroundImage: 'url(/img/photos/hero_2000x1692.webp)'
-        }}
+        // style={{
+        //   backgroundImage: 'url(/img/photos/hero_2000x1692.webp)'
+        // }}
+        id="heroImage"
         className="rounded-4-lg-start col-lg-6 order-lg-2 position-lg-absolute top-0 end-0 image-wrapper bg-image bg-cover h-100 min-vh-50"
-      />
+      >
+        {/* <Image src="/img/photos/hero_2000x1692.webp" layout="fill" objectFit="cover" className="rounded-4-lg-start" /> */}
+      </div>
 
       <div className="container">
         <div className="row">

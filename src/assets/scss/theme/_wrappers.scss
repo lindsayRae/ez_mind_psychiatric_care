@@ -14,6 +14,10 @@ footer.bg-dark,
 //----------------------------------------------------------//
 //	BACKGROUND IMAGE
 //----------------------------------------------------------//
+
+#heroImage {
+  background-image: url(/img/photos/hero_2000x1692.webp);
+}
 .image-wrapper {
   background-repeat: no-repeat;
   background-position: center center;
@@ -93,6 +97,9 @@ footer.bg-dark,
   }
 }
 @media (max-width: 575.98px) {
+  #heroImage {
+    background-image: url(/img/photos/hero_576x482.png);
+  }
   .bg-xs-none {
     background-image: none !important;
   }
