@@ -95,7 +95,7 @@ const Contact10 = () => {
                           onChange={(e) => setEmail(e.target.value)}
                           className="form-control border-0"
                         />
-                        <label htmlFor="frm_email">Email *</label>
+                        <label htmlFor="email">Email *</label>
                       </div>
                     </div>
 
