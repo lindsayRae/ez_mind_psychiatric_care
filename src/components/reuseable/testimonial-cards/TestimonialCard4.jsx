@@ -14,12 +14,7 @@ const TestimonialCard4 = ({ className = '', sliderWrapperClassname = 'p-10 p-md-
   return (
     <div className={`card shadow-lg ${className}`}>
       <div className="row gx-0">
-        <div
-          style={{
-            backgroundImage: 'url(/img/photos/tm1.jpg)'
-          }}
-          className="col-lg-6 image-wrapper bg-image bg-cover rounded-top rounded-lg-start"
-        />
+        <div id="testimonialImage" className="col-lg-6 image-wrapper bg-image bg-cover rounded-top rounded-lg-start" />
 
         <div className="col-lg-6">
           <div className={sliderWrapperClassname}>
