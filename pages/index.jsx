@@ -23,18 +23,32 @@ const baseURL = process.env.NEXT_PUBLIC_BASE_URL;
 export async function getStaticProps() {
   //* Strapi data
 
-  const res = await fetch(`${baseURL}/api/posts?sort=id&populate=image`, { cache: 'no-store' });
-  let posts = await res.json();
+  try {
+    const res = await fetch(`${baseURL}/api/posts?sort=id&populate=image`, { cache: 'no-store' });
 
-  posts = posts.data;
-  return {
-    props: {
-      posts
-    },
-    revalidate: 600 // In seconds
-  };
+    let posts = await res.json();
+
+    posts = posts.data;
+
+    return {
+      props: {
+        posts
+      },
+      revalidate: 600 // In seconds
+    };
+  } catch (error) {
+    console.error('Error in getStaticProps:', error);
+
+    // Return an error object or fallback data
+    return {
+      props: {
+        error: true, // You can set a specific flag for error handling
+        fallbackData: { errorMessage: `Error in getStaticProps- ${error}` } // Provide fallback data if needed
+      }
+    };
+  }
 }
-const Home = ({ posts }) => {
+const Home = ({ posts, error, fallbackData }) => {
   return (
     <Fragment>
       <PageProgress />
@@ -99,7 +113,7 @@ const Home = ({ posts }) => {
         </section>
         <section className="wrapper bg-light position-relative">
           <div className="container py-14 py-md-16">
-            <Blog2 posts={posts} />
+            <Blog2 posts={posts} error={fallbackData} />
             <Contact10 />
           </div>
         </section>
