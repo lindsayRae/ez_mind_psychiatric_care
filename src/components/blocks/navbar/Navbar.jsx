@@ -139,7 +139,13 @@ const Navbar = (props) => {
 
           {/* ============= humburger button for small device ============= */}
           <li className="nav-item d-lg-none">
-            <button data-bs-toggle="offcanvas" data-bs-target="#offcanvas-nav" className="hamburger offcanvas-nav-btn">
+            <button
+              data-bs-toggle="offcanvas"
+              data-bs-target="#offcanvas-nav"
+              className="hamburger offcanvas-nav-btn"
+              role="button"
+              aria-label="hamburger menu"
+            >
               <span />
             </button>
           </li>
