@@ -8,7 +8,7 @@ const TestimonialCard2 = (props) => {
 
       <div className={blockDetailsClassName}>
         <div className="info ps-0">
-          <h5 className="mb-1">Anonymous</h5>
+          <p className="mb-1 h5">Anonymous</p>
         </div>
       </div>
     </blockquote>
