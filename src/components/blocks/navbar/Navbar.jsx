@@ -7,7 +7,7 @@ import NextLink from 'components/reuseable/links/NextLink';
 import SocialLinks from 'components/reuseable/SocialLinks';
 
 import Social from './partials/Social';
-
+import Image from 'next/image';
 // ===================================================================
 
 // ===================================================================
@@ -125,12 +125,15 @@ const Navbar = (props) => {
                   data-type="book-button"
                   data-practice-id={90010}
                   title="EZ Mind Psychiatric Care"
+                  target="_blank"
                 >
-                  <img
+                  <Image
                     src="https://offsiteSchedule.zocdoc.com/images/remote/zd_bookonline_162x48.png"
                     alt="EZ Mind Psychiatric Care"
                     title="EZ Mind Psychiatric Care"
                     style={{ border: 0 }}
+                    height={48}
+                    width={162}
                   />
                 </a>
               </div>
@@ -158,12 +161,15 @@ const Navbar = (props) => {
                   data-type="book-button"
                   data-practice-id={90010}
                   title="EZ Mind Psychiatric Care"
+                  target="_blank"
                 >
-                  <img
+                  <Image
                     src="https://offsiteSchedule.zocdoc.com/images/remote/zd_bookonline_162x48.png"
                     alt="EZ Mind Psychiatric Care"
                     title="EZ Mind Psychiatric Care"
                     style={{ border: 0 }}
+                    height={48}
+                    width={162}
                   />
                 </a>
               </div>
