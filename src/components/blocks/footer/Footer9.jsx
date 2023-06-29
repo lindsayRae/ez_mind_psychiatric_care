@@ -2,7 +2,7 @@ import Link from 'next/link';
 // -------- custom component -------- //
 import NextLink from 'components/reuseable/links/NextLink';
 import SocialLinks from 'components/reuseable/SocialLinks'; // -------- data -------- //
-
+import Image from 'next/image';
 //import footerNav, { helps } from 'data/footer';
 
 const Footer9 = () => {
@@ -12,7 +12,7 @@ const Footer9 = () => {
         <div className="row gy-6 gy-lg-0">
           <div className="col-lg-4">
             <div className="widget">
-              <img
+              <Image
                 className="mb-4"
                 src="/img/logo_green250x70.png"
                 // srcSet="/img/logo-light@2x.png 2x"

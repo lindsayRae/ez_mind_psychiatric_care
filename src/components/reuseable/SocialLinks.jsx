@@ -1,5 +1,6 @@
 // ========================================================
 // ========================================================
+import Image from 'next/image';
 const links = [
   {
     id: 2,
@@ -26,10 +27,12 @@ const SocialLinks = ({ className = 'nav social social-white mt-4' }) => {
           {icon ? (
             <i className={icon} />
           ) : (
-            <img
+            <Image
               alt="tiktok"
               src={`/img/icons/tiktok_white40x40.png`}
-              style={{ width: 'auto', height: '20px', marginBottom: '5px' }}
+              style={{ marginBottom: '5px' }}
+              height={20}
+              width={20}
             />
           )}
         </a>

@@ -51,13 +51,13 @@ const Navbar = (props) => {
         <NextLink
           href="/"
           title={
-            <img
+            <Image
               alt="logo"
               src={`/img/logo_green250x70.png`}
               // srcSet={`/img/${logo}@2x.png 2x`}
 
-              width={'auto'}
-              height={'70'}
+              width={250}
+              height={70}
             />
           }
         />
