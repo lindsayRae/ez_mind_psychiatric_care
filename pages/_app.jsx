@@ -1,6 +1,7 @@
 import Head from 'next/head';
 import { useRouter } from 'next/router';
 import { Fragment, useEffect } from 'react';
+import Script from 'next/script';
 
 import 'animate.css'; // import swiper css
 
@@ -104,8 +105,8 @@ function MyApp({ Component, pageProps }) {
           content="At EZ Mind Psychiatric Care, we provide easy access to the care you deserve. Our goal is to meet you where you are in your mental health journey, viewing you as a whole person rather than just a disease process. Our holistic approach addresses the root causes of your symptoms, helping you reduce them and achieve true healing. Discover optimal physical and mental health with our comprehensive range of services in Washington State."
         />
         {/* Google tag (gtag.js) */}
-        <script async src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}`} />
-        <script
+        <Script async src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}`} />
+        <Script
           dangerouslySetInnerHTML={{
             __html: `
   window.dataLayer = window.dataLayer || [];
