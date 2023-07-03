@@ -12,7 +12,7 @@ import Image from 'next/image';
 
 // ===================================================================
 const Navbar = (props) => {
-  const { navClassName, social, button, fancy, navOtherClass, stickyBox, logoAlt } = props;
+  const { navClassName, button, fancy, navOtherClass, stickyBox, logoAlt } = props;
   const sticky = useSticky(350);
   const navbarRef = useRef(null); // dynamically render the logo
 
@@ -65,7 +65,8 @@ const Navbar = (props) => {
 
       <div id="offcanvas-nav" data-bs-scroll="true" className="navbar-collapse offcanvas offcanvas-nav offcanvas-start">
         <div className="offcanvas-header d-lg-none">
-          <h3 className="text-white fs-30 mb-0">EZ Mind Psychiatric Care</h3>
+          <Image alt="logo" src={`/img/logo_green250x70.png`} width={200} height={60} />
+          {/* <h3 className="text-white fs-30 mb-0">EZ Mind Psychiatric Care</h3> */}
           <button type="button" aria-label="Close" data-bs-dismiss="offcanvas" className="btn-close btn-close-white" />
         </div>
 
@@ -112,30 +113,25 @@ const Navbar = (props) => {
                 Blog
               </ScrollLink>
             </li>
+
+            <li className="nav-item">
+              <Link href="https://www.valant.io/myio/EZMindPsychiatricCare" target="_blank" className="nav-link">
+                Patient Portal
+              </Link>
+            </li>
           </ul>
 
           {/* ============= show contact info in the small device sidebar ============= */}
           <div className="offcanvas-footer d-lg-none">
             <div>
               <div style={{ marginBottom: '15px' }}>
-                <a
-                  style={{ display: 'block' }}
-                  href="https://www.zocdoc.com/practice/ez-mind-psychiatric-care-90010"
-                  className="zd-plugin"
-                  data-type="book-button"
-                  data-practice-id={90010}
-                  title="EZ Mind Psychiatric Care"
+                <Link
                   target="_blank"
+                  href="https://valant.io/prospectivepatient/EZMindPsychiatricCare/embedded"
+                  className="btn btn-sm btn-primary rounded"
                 >
-                  <Image
-                    src="https://offsiteSchedule.zocdoc.com/images/remote/zd_bookonline_162x48.png"
-                    alt="EZ Mind Psychiatric Care"
-                    title="EZ Mind Psychiatric Care"
-                    style={{ border: 0 }}
-                    height={48}
-                    width={162}
-                  />
-                </a>
+                  Book Online
+                </Link>
               </div>
               <NextLink title="info@ezmindcare.com" className="link-inverse" href="mailto:info@ezmindcare.com" />
               <br />
@@ -151,33 +147,8 @@ const Navbar = (props) => {
       <div className={navOtherClass}>
         <ul className="navbar-nav flex-row align-items-center ms-auto">
           {/* ============= contact button ============= */}
-          {button && (
-            <li className="nav-item d-none d-md-block">
-              <div>
-                <a
-                  style={{ display: 'block' }}
-                  href="https://www.zocdoc.com/practice/ez-mind-psychiatric-care-90010"
-                  className="zd-plugin"
-                  data-type="book-button"
-                  data-practice-id={90010}
-                  title="EZ Mind Psychiatric Care"
-                  target="_blank"
-                >
-                  <Image
-                    src="https://offsiteSchedule.zocdoc.com/images/remote/zd_bookonline_162x48.png"
-                    alt="EZ Mind Psychiatric Care"
-                    title="EZ Mind Psychiatric Care"
-                    style={{ border: 0 }}
-                    height={48}
-                    width={162}
-                  />
-                </a>
-              </div>
-            </li>
-          )}
 
-          {/* ============= social icons link ============= */}
-          {social && <Social />}
+          {button && <li className="nav-item d-none d-md-block">{button}</li>}
 
           {/* ============= humburger button for small device ============= */}
           <li className="nav-item d-lg-none">
@@ -227,7 +198,7 @@ Navbar.defaultProps = {
   search: false,
   language: false,
   stickyBox: true,
-  navOtherClass: 'navbar-other w-100 d-flex ms-auto',
+  navOtherClass: 'navbar-other ms-lg-4',
   navClassName: 'navbar navbar-expand-lg center-nav transparent navbar-light'
 };
 export default Navbar;
