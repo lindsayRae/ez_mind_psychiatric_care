@@ -89,7 +89,7 @@ function MyApp({ Component, pageProps }) {
         />
         <meta
           name="keywords"
-          content="mental health practitioner, psychiatric care, holistic approach, Washington State, mental health journey, whole person, disease process, root cause, reduce symptoms, healing, physical health, mental health, comprehensive services"
+          content="psychiatrist, psychiatry, mental health doctor, mental health practitioner, psychiatric care, holistic approach, Washington State, mental health journey, whole person, disease process, root cause, reduce symptoms, healing, physical health, mental health, comprehensive services"
         />
         {/* Open Graph Meta Tags  */}
         <meta property="og:title" content="Holistic Mental Health Practitioner in Washington State" />
