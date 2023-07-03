@@ -1,4 +1,5 @@
 import NextLink from 'components/reuseable/links/NextLink';
+import Link from 'next/link';
 import { Fragment } from 'react'; // -------- custom component -------- //
 import PageProgress from 'components/common/PageProgress';
 
@@ -56,8 +57,16 @@ const Home = ({ posts, error, fallbackData }) => {
       {/* ========== header section ========== */}
       <header className="wrapper mb-1">
         <Navbar
-          navClassName="navbar navbar-expand-lg center-nav transparent navbar-light caret-none"
-          button={<NextLink title="Contact" href="#contact" className="btn btn-sm btn-primary rounded" />}
+          navClassName="navbar navbar-expand-lg classic transparent navbar-light caret-none"
+          button={
+            <Link
+              target="_blank"
+              href="https://valant.io/prospectivepatient/EZMindPsychiatricCare/embedded"
+              className="btn btn-sm btn-primary rounded"
+            >
+              Book Online
+            </Link>
+          }
         />
       </header>
 
