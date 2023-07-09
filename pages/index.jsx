@@ -19,14 +19,17 @@ import dotenv from 'dotenv';
 dotenv.config();
 
 const baseURL = process.env.NEXT_PUBLIC_BASE_URL;
+const TOKEN = process.env.STRAPI_TOKEN;
 
 //? getStaticProps can only be exported from a page. You can’t export it from non-page files.
 export async function getStaticProps() {
   //* Strapi data
 
   try {
-    const res = await fetch(`${baseURL}/api/posts?sort=id&populate=image`, { cache: 'no-store' });
-
+    const res = await fetch(`${baseURL}/api/posts?sort=id&populate=image`, {
+      headers: { Authorization: `Bearer ${TOKEN}` },
+      cache: 'no-store'
+    });
     let posts = await res.json();
 
     posts = posts.data;

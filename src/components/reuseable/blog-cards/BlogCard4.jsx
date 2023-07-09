@@ -1,7 +1,9 @@
 import dayjs from 'dayjs';
 import Link from 'next/link';
 import Image from 'next/image';
-import NextLink from '../links/NextLink'; // ======================================================
+import NextLink from '../links/NextLink'; //
+import dotenv from 'dotenv';
+dotenv.config();
 
 // ======================================================
 const BlogCard4 = (props) => {
@@ -9,27 +11,29 @@ const BlogCard4 = (props) => {
   return (
     <article>
       <div className="card">
-        <figure className="card-img-top overlay overlay-1 hover-scale">
-          <Link href={`/posts/${props.slug}`} passHref legacyBehavior>
-            <a>
-              <Image
-                width={560}
-                height={350}
-                src={props.image.formats.small.url}
-                alt={props.title}
-                style={{
-                  width: '100%',
-                  height: 'auto'
-                }}
-              />
-              <span className="bg" />
-            </a>
-          </Link>
+        {props.image && (
+          <figure className="card-img-top overlay overlay-1 hover-scale">
+            <Link href={`/posts/${props.slug}`} passHref legacyBehavior>
+              <a>
+                <Image
+                  width={560}
+                  height={350}
+                  src={props.image.formats.small.url}
+                  alt={props.title}
+                  style={{
+                    width: '100%',
+                    height: 'auto'
+                  }}
+                />
+                <span className="bg" />
+              </a>
+            </Link>
 
-          <figcaption>
-            <h5 className="from-top mb-0">Read More</h5>
-          </figcaption>
-        </figure>
+            <figcaption>
+              <h5 className="from-top mb-0">Read More</h5>
+            </figcaption>
+          </figure>
+        )}
 
         <div className="card-body">
           <Link href={`/posts/${props.slug}`} passHref legacyBehavior>
