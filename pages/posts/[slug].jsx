@@ -136,9 +136,13 @@ export const getStaticProps = async (context) => {
   // https://forum.strapi.io/t/strapi-v4-search-by-slug-instead-id/13469/50?page=2
 
   const res = await fetch(`${baseURL}/api/post/find-by-slug/${slug}?populate=image`, {
-    headers: { Authorization: `Bearer ${TOKEN}` },
     cache: 'no-store'
   });
+
+  // const res = await fetch(`${baseURL}/api/posts?filters[${slug}]="slug"?populate=image`, {
+  //   headers: { Authorization: `Bearer ${TOKEN}` },
+  //   cache: 'no-store'
+  // });
 
   const data = await res.json();
 
@@ -151,11 +155,11 @@ export const getStaticProps = async (context) => {
 
 export const getStaticPaths = async () => {
   const res = await fetch(`${baseURL}/api/posts`, {
-    headers: { Authorization: `Bearer ${TOKEN}` },
+    // headers: { Authorization: `Bearer ${TOKEN}` },
     cache: 'no-store'
   });
   const { data } = await res.json();
-
+  //console.log('data', data);
   const paths = data.map((post) => {
     return {
       // params slug or id same as the dynamic file name so -> [id].jsx or [slug.jsx]
