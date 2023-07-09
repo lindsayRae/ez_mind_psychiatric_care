@@ -12,6 +12,7 @@ import dotenv from 'dotenv';
 // configure the package
 dotenv.config();
 const baseURL = process.env.NEXT_PUBLIC_BASE_URL;
+const TOKEN = process.env.STRAPI_TOKEN;
 
 const Post = ({ data }) => {
   const md = new MarkdownIt();
@@ -134,7 +135,10 @@ export const getStaticProps = async (context) => {
   // changed to below from strapi forum
   // https://forum.strapi.io/t/strapi-v4-search-by-slug-instead-id/13469/50?page=2
 
-  const res = await fetch(`${baseURL}/api/post/find-by-slug/${slug}?populate=image`, { cache: 'no-store' });
+  const res = await fetch(`${baseURL}/api/post/find-by-slug/${slug}?populate=image`, {
+    headers: { Authorization: `Bearer ${TOKEN}` },
+    cache: 'no-store'
+  });
 
   const data = await res.json();
 
@@ -146,7 +150,10 @@ export const getStaticProps = async (context) => {
 // gets array of objects of all posts
 
 export const getStaticPaths = async () => {
-  const res = await fetch(`${baseURL}/api/posts`, { cache: 'no-store' });
+  const res = await fetch(`${baseURL}/api/posts`, {
+    headers: { Authorization: `Bearer ${TOKEN}` },
+    cache: 'no-store'
+  });
   const { data } = await res.json();
 
   const paths = data.map((post) => {
