@@ -33,7 +33,7 @@ export async function getStaticProps() {
     let posts = await res.json();
 
     posts = posts.data;
-
+    console.log(posts);
     return {
       props: {
         posts
