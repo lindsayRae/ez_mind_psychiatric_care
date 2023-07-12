@@ -14,9 +14,53 @@ dotenv.config();
 const baseURL = process.env.NEXT_PUBLIC_BASE_URL;
 const TOKEN = process.env.STRAPI_TOKEN;
 
+// gets array of objects of all posts
+export const getStaticPaths = async () => {
+  const res = await fetch(`${baseURL}/api/posts`, {
+    headers: { Authorization: `Bearer ${TOKEN}` },
+    cache: 'no-store'
+  });
+  const { data } = await res.json();
+  //console.log('data', data);
+  const paths = data.map((post) => {
+    return {
+      // params slug or id same as the dynamic file name so -> [id].jsx or [slug.jsx]
+      params: { slug: post.slug }
+    };
+  });
+  return {
+    paths,
+    fallback: 'blocking'
+  };
+};
+
+// get one post by slug
+export const getStaticProps = async (context) => {
+  const slug = context.params.slug;
+  // https://strapi.io/blog/how-to-create-a-slug-system-in-strapi-v4
+  // changed to below from strapi forum
+  // https://forum.strapi.io/t/strapi-v4-search-by-slug-instead-id/13469/50?page=2
+
+  // const res = await fetch(`${baseURL}/api/post/find-by-slug/${slug}?populate=image`, {
+  //   cache: 'no-store'
+  // });
+
+  const res = await fetch(`${baseURL}/api/posts?filters[slug]=${slug}&populate=image`, {
+    headers: { Authorization: `Bearer ${TOKEN}` },
+    cache: 'no-store'
+  });
+
+  const data = await res.json();
+  console.log(data);
+  return {
+    props: { data },
+    revalidate: 600 // In seconds
+  };
+};
+
 const Post = ({ data }) => {
   const md = new MarkdownIt();
-  const htmlContent = md.render(data.data.content);
+  const htmlContent = md.render(data.data[0].content);
   return (
     <Fragment>
       <PageProgress />
@@ -41,11 +85,11 @@ const Post = ({ data }) => {
                     {/* <NextLink href="#" className="hover" title="Teamwork" /> */}
                   </div>
 
-                  <h1 className="display-1 mb-4">{data.data.title}</h1>
+                  <h1 className="display-1 mb-4">{data.data[0].title}</h1>
                   <ul className="post-meta mb-5">
                     <li className="post-date">
                       <i className="uil uil-calendar-alt" />
-                      <span>{dayjs(data.data.date).format('MMM DD YYYY')}</span>
+                      <span>{dayjs(data.data[0].date).format('MMM DD YYYY')}</span>
                     </li>
                     <li className="post-author">
                       <i className="uil uil-user" />
@@ -65,7 +109,7 @@ const Post = ({ data }) => {
               <div className="col-lg-10 mx-auto">
                 <div className="blog single mt-n17">
                   <div className="card shadow-lg">
-                    <FigureImage width={960} height={600} src={data.data.image.url} className="card-img-top" />
+                    <FigureImage width={960} height={600} src={data.data[0].image.url} className="card-img-top" />
                     <div className="card-body">
                       <div className="classic-view">
                         <article className="post">
@@ -125,49 +169,3 @@ const Post = ({ data }) => {
 };
 
 export default Post;
-// I did not use this solution for finding by slug, but if the below code every fails try this:
-
-// get one post by slug
-export const getStaticProps = async (context) => {
-  const slug = context.params.slug;
-  // https://strapi.io/blog/how-to-create-a-slug-system-in-strapi-v4
-  // const res = await fetch(`http://127.0.0.1:8082/api/posts?filters\[Slug\][$eq]=${slug}`);
-  // changed to below from strapi forum
-  // https://forum.strapi.io/t/strapi-v4-search-by-slug-instead-id/13469/50?page=2
-
-  const res = await fetch(`${baseURL}/api/post/find-by-slug/${slug}?populate=image`, {
-    cache: 'no-store'
-  });
-
-  // const res = await fetch(`${baseURL}/api/posts?filters[${slug}]="slug"?populate=image`, {
-  //   headers: { Authorization: `Bearer ${TOKEN}` },
-  //   cache: 'no-store'
-  // });
-
-  const data = await res.json();
-
-  return {
-    props: { data },
-    revalidate: 600 // In seconds
-  };
-};
-// gets array of objects of all posts
-
-export const getStaticPaths = async () => {
-  const res = await fetch(`${baseURL}/api/posts`, {
-    // headers: { Authorization: `Bearer ${TOKEN}` },
-    cache: 'no-store'
-  });
-  const { data } = await res.json();
-  //console.log('data', data);
-  const paths = data.map((post) => {
-    return {
-      // params slug or id same as the dynamic file name so -> [id].jsx or [slug.jsx]
-      params: { slug: post.slug }
-    };
-  });
-  return {
-    paths,
-    fallback: 'blocking'
-  };
-};

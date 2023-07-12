@@ -27,7 +27,7 @@ export async function getStaticProps() {
 
   try {
     const res = await fetch(`${baseURL}/api/posts?sort=id&populate=image`, {
-      // headers: { Authorization: `Bearer ${TOKEN}` },
+      headers: { Authorization: `Bearer ${TOKEN}` },
       cache: 'no-store'
     });
     let posts = await res.json();
