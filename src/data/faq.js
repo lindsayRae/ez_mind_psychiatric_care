@@ -98,9 +98,8 @@ export const accordionList1 = [
       no: 'Fifteen',
       expand: false,
       heading: 'What sets us apart from other providers? ',
-      body: `We are humans just like you and will treat you with the same kindness and respect we would like. We listen, we are authentic, and we really do care.,
+      body: `We are humans just like you and will treat you with the same kindness and respect we would like. We listen, we are authentic, and we really do care.`,
       parent: 'accordionFAQ'
-      `
     }
   ]
 ]; // used in the faq-2 block
