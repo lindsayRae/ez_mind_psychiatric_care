@@ -25,7 +25,7 @@ const About24 = () => {
           </div>
 
           <div className="col-lg-6">
-            <h2 className="display-5 mb-5">
+            <h2 className="mb-5">
               Hi, I’m Kristi. I pride myself at being human first, a nurse second, and a nurse practitioner third.
             </h2>
             <p className="mb-6">

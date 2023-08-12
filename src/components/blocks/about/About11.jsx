@@ -12,7 +12,7 @@ const About11 = () => {
         </div>
 
         <div className="col-lg-6">
-          <h2 className="display-4 mb-3">About Us</h2>
+          <h2 className="mb-3">About Us</h2>
           <p className="lead fs-lg">
             Here at EZ Mind Psychiatric Care we want you to have access to care you deserve with ease.
           </p>

@@ -44,7 +44,7 @@ const Services22 = () => {
       <div className="row">
         <div className="col-md-10 offset-md-1 col-lg-8 offset-lg-2 mx-auto text-center">
           {/* <h2 className="fs-16 text-uppercase text-muted mb-3">Services</h2> */}
-          <h2 className="display-3 mb-10 px-xl-10 px-xxl-15">
+          <h2 className="mb-10 px-xl-10 px-xxl-15">
             Our Services are <span className="underline-3 style-2 yellow">Inclusive</span> and in a Safe Environment
           </h2>
         </div>

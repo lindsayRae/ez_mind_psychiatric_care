@@ -59,7 +59,7 @@ const Contact10 = () => {
             <div className="row gx-md-8 gx-xl-12 gy-10">
               <div className="col-lg-6">
                 <Email />
-                <h2 className="display-4 mb-3 pe-lg-10">Contact Us Today</h2>
+                <h2 className="mb-3 pe-lg-10">Contact Us Today</h2>
                 <p className="lead pe-lg-12 mb-0">
                   We look forward to meeting you right where you are. Contact us to set up an appointment or to learn
                   more about us.

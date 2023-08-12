@@ -3,7 +3,7 @@ import { TestimonialCard4 } from 'components/reuseable/testimonial-cards';
 const Testimonial2 = () => {
   return (
     <div className="position-relative mt-n18 mt-md-n23 mb-16 mb-md-18">
-      <h2 className="display-4 mb-10 px-lg-12 px-xl-15 text-center">Testimonials</h2>
+      <h2 className="mb-10 px-lg-12 px-xl-15 text-center">Testimonials</h2>
       <div
         className="shape rounded-circle bg-line primary rellax w-18 h-18"
         style={{
