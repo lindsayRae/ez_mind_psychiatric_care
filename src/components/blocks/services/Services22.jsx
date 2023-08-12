@@ -41,7 +41,7 @@ const list3 = [
 const Services22 = () => {
   return (
     <Fragment>
-      <div className="row" id="services">
+      <div className="row">
         <div className="col-md-10 offset-md-1 col-lg-8 offset-lg-2 mx-auto text-center">
           {/* <h2 className="fs-16 text-uppercase text-muted mb-3">Services</h2> */}
           <h2 className="display-3 mb-10 px-xl-10 px-xxl-15">

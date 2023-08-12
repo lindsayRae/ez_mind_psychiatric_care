@@ -1,4 +1,3 @@
-import NextLink from 'components/reuseable/links/NextLink';
 import Link from 'next/link';
 import { Fragment } from 'react'; // -------- custom component -------- //
 import PageProgress from 'components/common/PageProgress';
@@ -26,7 +25,7 @@ export async function getStaticProps() {
   //* Strapi data
 
   try {
-    const res = await fetch(`${baseURL}/api/posts?sort=id&populate=image`, {
+    const res = await fetch(`${baseURL}/api/posts?sort=id&populate=*`, {
       headers: { Authorization: `Bearer ${TOKEN}` },
       cache: 'no-store'
     });
@@ -80,7 +79,7 @@ const Home = ({ posts, error, fallbackData }) => {
         <section className="wrapper bg-light">
           {/* ========== blog section ========== */}
 
-          <div className="container py-14 py-md-16">
+          <div className="container py-14 py-md-16" id="services">
             <Services22 />
             {/* <hr className="" /> */}
           </div>
@@ -93,7 +92,7 @@ const Home = ({ posts, error, fallbackData }) => {
                   Evaluations are for treatment purposes only. <br /> We are an outpatient treatment facility, we DO NOT
                   offer crisis support. <br />
                   In case of an emergency, please call 911, call suicide hotline (988),
-                  <br />
+                  <br id="testimonials" />
                   or go to nearest Emergency Department.{' '}
                 </p>
               </div>
@@ -105,7 +104,7 @@ const Home = ({ posts, error, fallbackData }) => {
             <Testimonial2 />
           </div>
         </section>
-        <section className="wrapper bg-light">
+        <section className="wrapper bg-light" id="about">
           <div className="container py-14 py-md-16">
             <About11 />
             <hr className="" />
@@ -113,17 +112,17 @@ const Home = ({ posts, error, fallbackData }) => {
           </div>
         </section>
         <Banner3 />
-        <section className="wrapper bg-light position-relative">
+        <section className="wrapper bg-light position-relative" id="pricing">
           <div className="container py-14 py-md-16">
             <Pricing3 />
           </div>
         </section>
-        <section className="wrapper bg-soft-primary position-relative">
+        <section className="wrapper bg-soft-primary position-relative" id="faqs">
           <div className="container py-14 py-md-16">
             <FAQ1 />
           </div>
         </section>
-        <section className="wrapper bg-light position-relative">
+        <section className="wrapper bg-light position-relative" id="blog">
           <div className="container py-14 py-md-16">
             <Blog2 posts={posts} error={fallbackData} />
             <Contact10 />

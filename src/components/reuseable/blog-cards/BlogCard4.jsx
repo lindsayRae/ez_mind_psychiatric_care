@@ -7,7 +7,6 @@ dotenv.config();
 
 // ======================================================
 const BlogCard4 = (props) => {
-  console.log(props);
   //const { date, image, title, category, description, className = 'card' } = props;
   return (
     <article>
