@@ -25,7 +25,7 @@ export async function getStaticProps() {
   //* Strapi data
 
   try {
-    const res = await fetch(`${baseURL}/api/posts?sort=id&populate=*`, {
+    const res = await fetch(`${baseURL}/api/posts?sort=id:desc&populate=*`, {
       headers: { Authorization: `Bearer ${TOKEN}` },
       cache: 'no-store'
     });
