@@ -8,7 +8,7 @@ const Tiles10 = () => {
               <img
                 src="/img/photos/about1_240x245.webp"
                 // srcSet="/img/photos/ab1@2x.jpg 2x"
-                alt=""
+                alt="hope"
               />
             </figure>
           </div>
@@ -18,7 +18,7 @@ const Tiles10 = () => {
               <img
                 src="/img/photos/about2_290x225.webp"
                 //  srcSet="/img/photos/ab2@2x.jpg 2x"
-                alt=""
+                alt="holistic care"
               />
             </figure>
           </div>
@@ -30,7 +30,7 @@ const Tiles10 = () => {
           <img
             src="/img/photos/about3_290x440.webp"
             // srcSet="/img/photos/ab3@2x.jpg 2x"
-            alt=""
+            alt="root cause"
           />
         </figure>
       </div>
