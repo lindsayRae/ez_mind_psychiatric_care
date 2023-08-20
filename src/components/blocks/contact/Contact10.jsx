@@ -120,7 +120,7 @@ const Contact10 = () => {
                       {errors && <p style={{ color: '#b36161' }}>Please complete all form fields</p>}
                       {errors2 && (
                         <p style={{ color: '#b36161' }}>
-                          There was an issue sending your email. Please email is directly at info@ezmindcare.com
+                          There was an issue sending your email. Please call us at 206-319-5399
                         </p>
                       )}
                       {success && (

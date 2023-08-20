@@ -133,9 +133,10 @@ const Navbar = (props) => {
                   Book Online
                 </Link>
               </div>
-              <NextLink title="info@ezmindcare.com" className="link-inverse" href="mailto:info@ezmindcare.com" />
+
+              <a href="tel:206-319-5399">p. 206-319-5399</a>
               <br />
-              <NextLink href="tel:206-319-5399" title="p. 206-319-5399" />
+              <a href="fax:206-385-5946">f. 206-385-5946</a>
               <br />
               <SocialLinks />
             </div>
@@ -146,6 +147,9 @@ const Navbar = (props) => {
       {/* ============= right side header content ============= */}
       <div className={navOtherClass}>
         <ul className="navbar-nav flex-row align-items-center ms-auto">
+          {/* <div className="navbar-other ms-auto w-100 d-none d-lg-block">
+            <SocialLinks className="nav social social-muted justify-content-end text-end" />
+          </div> */}
           {/* ============= contact button ============= */}
 
           {button && <li className="nav-item d-none d-md-block">{button}</li>}
