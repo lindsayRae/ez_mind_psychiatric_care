@@ -23,7 +23,7 @@ const SocialLinks = ({ className = 'nav social social-white mt-4' }) => {
   return (
     <nav className={className}>
       {links.map(({ id, icon, url }) => (
-        <a href={url} key={id} target="_blank" rel="noreferrer">
+        <a href={url} key={id} target="_blank" rel="noopener noreferrer">
           {icon ? (
             <i className={icon} />
           ) : (

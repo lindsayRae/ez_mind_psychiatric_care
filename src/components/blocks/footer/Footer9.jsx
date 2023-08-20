@@ -40,12 +40,12 @@ const Footer9 = () => {
                   </li>
                 ))} */}
                 <li>
-                  <a href="https://988lifeline.org/" target="_blank">
+                  <a href="https://988lifeline.org/" target="_blank" rel="noopener noreferrer">
                     988 Suicide & Crisis Lifeline
                   </a>
                 </li>
                 <li>
-                  <a href="https://www.nami.org/Home" target="_blank">
+                  <a href="https://www.nami.org/Home" target="_blank" rel="noopener noreferrer">
                     National Alliance on Mental Illness
                   </a>
                 </li>

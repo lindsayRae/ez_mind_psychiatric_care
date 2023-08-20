@@ -129,6 +129,7 @@ const Navbar = (props) => {
                   target="_blank"
                   href="https://valant.io/prospectivepatient/EZMindPsychiatricCare/embedded"
                   className="btn btn-sm btn-primary rounded"
+                  rel="noopener noreferrer"
                 >
                   Book Online
                 </Link>

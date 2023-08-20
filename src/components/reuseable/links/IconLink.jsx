@@ -1,12 +1,11 @@
 // ==============================================================
 // ==============================================================
-const IconLink = ({
-  href,
-  icon
-}) => {
-  return <a href={href} target="_blank" rel="noreferrer">
+const IconLink = ({ href, icon }) => {
+  return (
+    <a href={href} target="_blank" rel="noopener noreferrer">
       {icon}
-    </a>;
+    </a>
+  );
 };
 
 export default IconLink;
