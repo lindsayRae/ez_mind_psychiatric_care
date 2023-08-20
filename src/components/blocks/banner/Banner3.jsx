@@ -13,9 +13,9 @@ const Banner3 = () => {
       <div className="container py-18 text-center">
         <div className="row">
           <div className="col-lg-10 col-xl-10 col-xxl-8 mx-auto">
-            <h2 className="display-4 px-lg-10 px-xl-13 px-xxl-10 mb-10 text-white">
+            <p className="display-4 px-lg-10 px-xl-13 px-xxl-10 mb-10 text-white">
               " There is hope, even when your brain tells you there isn't." - John Green
-            </h2>
+            </p>
           </div>
         </div>
       </div>

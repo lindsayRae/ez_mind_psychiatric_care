@@ -38,7 +38,7 @@ const BlogCard4 = (props) => {
         <div className="card-body">
           <Link href={`/posts/${props.slug}`} passHref legacyBehavior>
             <div className="post-header">
-              <h2 className="post-title h3 mt-1 mb-3">{props.title}</h2>
+              <h3 className="post-title h3 mt-1 mb-3">{props.title}</h3>
             </div>
           </Link>
           <Link href={`/posts/${props.slug}`} passHref legacyBehavior>

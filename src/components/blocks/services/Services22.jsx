@@ -43,7 +43,6 @@ const Services22 = () => {
     <Fragment>
       <div className="row">
         <div className="col-md-10 offset-md-1 col-lg-8 offset-lg-2 mx-auto text-center">
-          {/* <h2 className="fs-16 text-uppercase text-muted mb-3">Services</h2> */}
           <h2 className="mb-10 px-xl-10 px-xxl-15">
             Our Services are <span className="underline-3 style-2 yellow">Inclusive</span> and in a Safe Environment
           </h2>
@@ -243,7 +242,7 @@ Things of focus are typically nutrition, exercise, sleep, substance use, etc. "
 const List = ({ color, title, text }) => {
   return (
     <div className="col-lg-6">
-      <h2 className="mb-3">{title}</h2>
+      <h3 className="mb-3">{title}</h3>
       <p>{text}</p>
     </div>
   );

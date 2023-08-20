@@ -25,9 +25,9 @@ const About24 = () => {
           </div>
 
           <div className="col-lg-6">
-            <h2 className="mb-5">
+            <h3 className="mb-5">
               Hi, I’m Kristi. I pride myself at being human first, a nurse second, and a nurse practitioner third.
-            </h2>
+            </h3>
             <p className="mb-6">
               I have walked through life and experienced the ups and downs like you.  My passion is to show up and help
               others; this is truly what I think I was put here on this earth to do.  My most recent passion is helping
