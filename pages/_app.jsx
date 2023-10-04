@@ -1,6 +1,6 @@
-import Head from 'next/head';
 import { useRouter } from 'next/router';
 import { Fragment, useEffect } from 'react';
+import Head from 'next/head';
 import Script from 'next/script';
 
 import 'animate.css'; // import swiper css
@@ -77,19 +77,21 @@ function MyApp({ Component, pageProps }) {
       scrollCue.update();
     })();
   }, [pathname]);
+
+  const landingTitle = 'EZ Mind Psychiatric Care - Holistic Mental Health Practitioner in Washington State';
+  const landingDesc =
+    'At EZ Mind Psychiatric Care, we provide easy access to the care you deserve. Our goal is to meet you where you are in your mental health journey, viewing you as a whole person rather than just a disease process. Our holistic approach addresses the root causes of your symptoms, helping you reduce them and achieve true healing. Discover optimal physical and mental health with our comprehensive range of services.';
+
   return (
     <Fragment>
       <Head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title> EZ Mind Psychiatric Care - Holistic Mental Health Practitioner in Washington State</title>
-        <meta
-          name="description"
-          content="At EZ Mind Psychiatric Care, we provide easy access to the care you deserve. Our goal is to meet you where you are in your mental health journey, viewing you as a whole person rather than just a disease process. Our holistic approach addresses the root causes of your symptoms, helping you reduce them and achieve true healing. Discover optimal physical and mental health with our comprehensive range of services."
-        />
+        <title>{landingTitle}</title>
+        <meta name="description" content={landingDesc} />
         <meta
           name="keywords"
-          content="psychiatrist, psychiatry, mental health doctor, mental health practitioner, psychiatric care, holistic approach, Washington State, mental health journey, whole person, disease process, root cause, reduce symptoms, healing, physical health, mental health, comprehensive services"
+          content="Female Psychiatrist, Mental Health Services Washington State, Counseling, Therapy, Telehealth for Depression, Psychiatric Evaluation, Washington State Psychiatrist, Seattle Mental Health, Anxiety Treatment, Depression Treatment, Bipolar Disorder Treatment, Telepsychiatry Services in Washington State, Psychiatric Medication Management"
         />
         {/* Open Graph Meta Tags  */}
         <meta property="og:title" content="Holistic Mental Health Practitioner in Washington State" />
