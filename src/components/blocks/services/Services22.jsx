@@ -1,5 +1,5 @@
 import { Fragment } from 'react'; // -------- icons -------- //
-
+import Link from 'next/link';
 import Puzzle from 'icons/solid-mono/Puzzle';
 import Compare from 'icons/solid-mono/Compare';
 import VideoCall from 'icons/solid-mono/VideoCall';
@@ -244,6 +244,16 @@ const List = ({ color, title, text }) => {
     <div className="col-lg-6">
       <h3 className="mb-3">{title}</h3>
       <p>{text}</p>
+      <div style={{ marginBottom: '15px' }}>
+        <Link
+          target="_blank"
+          href="https://valant.io/prospectivepatient/EZMindPsychiatricCare/embedded"
+          className="btn btn-sm btn-primary rounded"
+          rel="noopener noreferrer"
+        >
+          Book Now
+        </Link>
+      </div>
     </div>
   );
 };
