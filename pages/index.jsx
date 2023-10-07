@@ -29,9 +29,9 @@ export async function getStaticProps() {
       headers: { Authorization: `Bearer ${TOKEN}` },
       cache: 'no-store'
     });
-    if (!res.ok) {
-      throw new Error(`Fetch failed with status ${response.status}`);
-    }
+    // if (!res.ok) {
+    //   throw new Error(`Fetch failed with status ${response.status}`);
+    // }
     let posts = await res.json();
 
     posts = posts.data;
