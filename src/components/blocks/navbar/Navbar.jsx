@@ -127,7 +127,7 @@ const Navbar = (props) => {
               <div style={{ marginBottom: '15px' }}>
                 <Link
                   target="_blank"
-                  href="https://valant.io/prospectivepatient/EZMindPsychiatricCare/embedded"
+                  href="https://ezmindpsychcare.intakeq.com/booking"
                   className="btn btn-sm btn-primary rounded"
                   rel="noopener noreferrer"
                 >
