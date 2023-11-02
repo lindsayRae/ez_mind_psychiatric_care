@@ -115,7 +115,7 @@ const Navbar = (props) => {
             </li>
 
             <li className="nav-item">
-              <Link href="https://www.valant.io/myio/EZMindPsychiatricCare" target="_blank" className="nav-link">
+              <Link href="https://ezmindpsychcare.intakeq.com" target="_blank" className="nav-link">
                 Patient Portal
               </Link>
             </li>
