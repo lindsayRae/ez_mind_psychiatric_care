@@ -12,7 +12,7 @@ const accordions = [
     no: 'ThirtyOne',
     expand: false,
     heading: 'Insurance',
-    body: 'Currently we accept Aetna, Cigna, Medicare, Optum, Oscar, Oxford and United Health insurance plans. If you have a plan not listed above, we are likely in the credentialing process and will be able to accept your plan soon. If you’d like to be seen and we are not in network with your plan, we can provide you will a super bill for your visits to submit for reimbursement from your insurer; however, you will be responsible for the payment upfront.',
+    body: 'Currently we accept Aetna, Cigna, Medicare, Optum, Oscar, Oxford, United Health, Magellan, and Kaiser insurance plans. If you have a plan not listed above, we are likely in the credentialing process and will be able to accept your plan soon. If you’d like to be seen and we are not in network with your plan, we can provide you will a super bill for your visits to submit for reimbursement from your insurer; however, you will be responsible for the payment upfront.',
     parent: 'accordionPricing'
   },
   {

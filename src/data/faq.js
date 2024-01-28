@@ -47,7 +47,7 @@ export const accordionList1 = [
       no: 'Seven',
       expand: false,
       heading: 'Do you accept insurance?',
-      body: `We currently accept Aetna, Cigna, and Optum. Other plans will be accepted soon, please contact us for further information.`,
+      body: `We currently accept Aetna, Cigna, Medicare, Optum, Oscar, Oxford, United Health, Magellan, and Kaiser. Other plans will be accepted soon, please contact us for further information.`,
       parent: 'accordionFAQ'
     }
   ],
